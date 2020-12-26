@@ -1,6 +1,14 @@
+import React, { useState, useContext } from "react";
+import { Context } from "../context";
 import { getEpisodes } from "../content/episodes"
 
 function HomePage({ episodes }) {
+  const { state, dispatch } = useContext(Context);
+  // onClick={() =>
+  //   dispatch({
+  //     type: "LOGGED_IN_USER",
+  //     payload: "Ryan Dhungel",
+  //   })
   return <div className="flex flex-wrap md items-center h-screen">
     <div className="bg-white w-full md:w-1/2 h-screen">
       <div className="mx-32">
