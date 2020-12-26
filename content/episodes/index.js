@@ -13,7 +13,7 @@ const xml2json = (xml) => {
                     title: $(this).children("title").text(),
                     description: $(this).
                         children("description")
-                        .text().replace(/(<([^>]+)>)/gi, ""),
+                        .text().replace(/(<([^>]+)>)/gi,""),
                     audio: $(this).children("enclosure").attr("url"),
                     image: 'https://s3-us-west-2.amazonaws.com/anchor-generated-image-bank/production/podcast_uploaded_nologo400/1385315/1385315-1607371484254-38a6b804033b4.jpg'
                 };
