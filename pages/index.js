@@ -23,7 +23,7 @@ function HomePage({episodes}) {
        </Link>
         
       </div >
-      <div className=" w-full md:w-1/2 md:h-screen relative bg-red-200 ">
+      <div className=" w-full md:w-1/2 md:h-screen relative bg-blue-300 ">
       <h1 className=" text-4xl sm:text-6xl font-bold mt-16 absolute  top-2 md:top-32 sm:top-20  left-4 md:left-2 text-white z-20">S7aba Podcast</h1>
       <h1 className="text-4xl sm:text-6xl font-bold mt-16 absolute top-12  md:top-52  sm:top-36 right-4 md:right-2 text-white z-20">سحابة بودكاست</h1>
         <img
@@ -31,6 +31,7 @@ function HomePage({episodes}) {
           className="h-full md:h-screen w-full filter-grayscale object-fit"
           alt=""
         />
+      
       </div>
     </div>
     

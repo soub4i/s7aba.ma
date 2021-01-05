@@ -1,10 +1,13 @@
 import Link from "next/link";
+import {useRef,useState} from 'react'
 
 export default function Navbar() {
+  const nav=useRef(null)
+  const [isActive, setActive] = useState(false)
   function handleClick(e)
-  {console.log("hf")
-    var nav = document.getElementsByTagName("NAV")[0];
-    nav.classList.toggle('active');
+  {
+    
+    setActive(!isActive)
   }
     return (
         <header className=" flex flex-row justify-between align-center md:absolute md:top-0 w-full  z-50  px-6 md:my-0 sm:my-4 my-2 h-12 ">
@@ -20,7 +23,7 @@ export default function Navbar() {
               <button className="md:hidden self-end " onClick={handleClick}><i className=" fas fa-bars font-extrabold text-gray-700 text-3xl "></i></button>
             </div>
             
-          <nav className="absolute md:relative md:w-1/2 hidden md:block bg-white md:bg-transparent h-screen w-screen z-50">
+          <nav  ref={nav} className={`absolute md:relative md:w-1/2  md:block bg-white md:bg-transparent h-screen w-screen z-50 hidden ${isActive?'active':''}`}>
          
             <ul className="p-4   flex flex-col md:flex-row md:justify-around md:items-start justify-between  items-center   h-full ">
             <button className="md:hidden self-end" onClick={handleClick}><i className=" fas fa-times text-3xl"></i></button>
