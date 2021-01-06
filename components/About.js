@@ -1,13 +1,14 @@
 import Link from "next/link";
+import Image from 'next/image'
 
 export default function About() {
   return (
     <section id="about" className="flex flex-col items-center md:flex-row md:h-screen py- bg-gray-100 bg-opacity-20">
       
       
-        <div className=" flex  justify-center  items-center md:w-1/2 mb-10 ">
-            <div className="px-6">
-      <img src="profil.jpg" className="filter-shadow profile-pic" alt="profile" ></img>
+        <div className=" flex  justify-center  items-center md:w-1/2 my-10 ">
+            <div className="px-8 mx-4 filter-shadow profile-pic ">
+      <Image src="/profil.jpg" layout='fill' alt="profile" className="profile-pic"/>
       </div>
       <div >
           <h1 className="font-thin">Abderrahim Soubai-Elidrisi</h1>
