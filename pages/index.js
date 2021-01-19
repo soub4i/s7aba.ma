@@ -1,13 +1,14 @@
 import Navbar from '../components/Navbar'
 import Link from 'next/link'
 import About from "../components/About"
-import Episode from "../components/Episode"
 import Contact from "../components/Contact"
-import Image from 'next/image'
 import { getEpisodes } from "../content/episodes"
+import Episodes from '../components/Episodes'
+import LastEpisode from '../components/LastEpisode'
+import TopThree from '../components/TopThree'
 
 
-function HomePage({episodes}) {
+function HomePage({episodes, lastEpisode}) {
   return (
      <div >
       <div className="flex flex-wrap  md items-center md:h-screen relative justify-center  ">
@@ -36,17 +37,28 @@ function HomePage({episodes}) {
       </div>
     </div>
     
-  <About></About>  
-{/* <section id="episodes" className="flex flex-col items-center"> {episodes.map((episode)=>{
-  return <Episode episode={episode} key={episode.guid}></Episode>
-})}</section> */}
+  <About />  
+
+<section id="episodes" className="flex flex-col items-center">
+  <h1>Last Episode</h1>
+ <LastEpisode episode={lastEpisode} />  
+</section> 
+<section id="episodes" className="flex flex-col items-center">
+  <h1>Our Top 3 Episodes</h1>
+  <div className="container">
+
+ <TopThree episodes={episodes} />  
+  </div>
+</section> 
+
+
 <Contact></Contact>
     </div>
   );
 }
 HomePage.getInitialProps = async (ctx) => {
   const episodes = await getEpisodes();
-  return { episodes }
+  return { episodes :  episodes.slice(Math.max(episodes.length -3, 0)) , lastEpisode : episodes[0]  }
 }
 
 

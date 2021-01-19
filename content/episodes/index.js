@@ -20,11 +20,12 @@ const xml2json = (xml) => {
                 
                 return {
                     guid: $(this).children("guid").text(),
-                    title: $(this).children("title").text(),
+                    title: $(this).children("title").text().replace(/CDATA|[<>![\]\\]+/gi,""),
                     published_at: $(this).children("pubDate").text(),
                     description: $(this).
                         children("description")
-                        .text().replace(/(<([^>]+)>)/gi,""),
+                        .text()
+                        .replace(/[<>![\]\\]+/gi,""),
                     audio: $(this).children("enclosure").attr("url"),
                     image: $(this).getImage()
                 };
