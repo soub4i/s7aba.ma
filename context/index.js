@@ -2,7 +2,7 @@ import { useState, useEffect, useReducer, createContext } from "react";
 import { episode } from "./reducers/episode";
 
 const initialState = {
-  currentEpisode: {},
+  currentEpisode: null,
 };
 
 const Context = createContext({});

@@ -7,19 +7,18 @@ import Contact from "../components/Contact"
 import { getEpisodes } from "../content/episodes"
 import LastEpisode from '../components/LastEpisode'
 import TopThree from '../components/TopThree'
+import Player from "../components/Player";
 
 
 function HomePage({episodes, lastEpisode}) {
-  const { state, dispatch } = useContext(Context);
-    // onClick={() =>
-  //   dispatch({
-  //     type: "LOGGED_IN_USER",
-  //     payload: "Ryan Dhungel",
-  //   })
+  const { state : { currentEpisode } } = useContext(Context);
+ 
   return (
      <div >
       <div className="flex flex-wrap  md items-center md:h-screen relative justify-center  ">
       <Navbar></Navbar>
+      <Player episode={currentEpisode} />
+
       <div className=" h-1/3 md:w-1/2 flex flex-col  items-center content-center justify-between py-20 md:py-0 order-3 md:order-none" id="home">
             <div className="text-center">
               <span className="uppercase ">Minimalist Cloud Podcast</span>

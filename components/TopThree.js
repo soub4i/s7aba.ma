@@ -1,5 +1,16 @@
+import { useContext } from "react";
+import { Context } from "../context";
 
 export default function TopThree({episodes}) {
+
+    const { state, dispatch } = useContext(Context);
+    
+    const play = (e) =>
+    dispatch({
+      type: "PLAY",
+      payload: e,
+    })
+   
 
     const Ep = ({e}) => {
         return (<div className=" lg:w-1/3 mb-4 md:mb-0">
@@ -15,7 +26,7 @@ export default function TopThree({episodes}) {
             {e.description}
             </div>
             <div className="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
-              <a className="inline bg-gray-200 py-1 px-2 rounded-full text-xs  text-gray-700" href="#">Play this episode</a>
+              <a onClick={() => play(e)} className="inline bg-gray-200 py-1 px-2 rounded-full text-xs  text-gray-700" href="#">Play this episode</a>
             </div>
           </div>
         </div>
