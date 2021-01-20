@@ -13,7 +13,7 @@ export default function Navbar() {
     return (
         <header className=" flex flex-row justify-between align-center md:absolute md:top-0 w-full  z-50  px-6 md:my-0 sm:my-4 my-2 h-12 ">
           <div className="flex flex-row  justify-between w-full md:w-1/2 " >
-            <div ><Image src="/logo.png" width={65} height={48}/> </div>
+            <a href="/" ><Image src="/logo.png" width={65} height={48}/> </a>
          
             <div className="hidden md:flex flex-row   justify-between w-full md:w-1/2 px-8  items-end  ">
             <a href="https://www.instagram.com/s7aba_podcast/" target="_blank" ><Image src="/instagram.svg" width={65} height={36} /></a>
@@ -36,7 +36,7 @@ export default function Navbar() {
               <li> <Link href="#about">
                   <button className="font-semibold text-gray-700 md:text-white focus:outline-none   hover:text-gray-200 " onClick={handleClick}>About Us</button>
                 </Link></li>
-              <li> <Link href="#episodes">
+              <li> <Link href="episodes">
                   <button className="font-semibold text-gray-700 md:text-white focus:outline-none hover:text-gray-200" onClick={handleClick}>Episodes</button>
                 </Link></li>
               <li> <Link href="#contact">
