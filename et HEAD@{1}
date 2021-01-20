@@ -1,0 +1,16 @@
+[33m405b5ee[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Merge pull request #13 from AbderrahimSoubaiElidrissi/feature/global-player
+[33mc0958a7[m[33m ([m[1;31morigin/feature/global-player[m[33m, [m[1;32mfeature/global-player[m[33m)[m feat(player): add player
+[33m214ceff[m fix: resolve conflicts
+[33mf1f6d07[m[33m ([m[1;31morigin/feature/hp-sections[m[33m, [m[1;32mfeature/hp-sections[m[33m)[m feat(hp): add new section
+[33m2a459b4[m fix(page): tiny fix
+[33m42c9413[m Merge pull request #2 from AbderrahimSoubaiElidrissi/basic-features
+[33m5b28c00[m Merge pull request #12 from AbderrahimSoubaiElidrissi/feature/dynamic-pic
+[33m1d5eb50[m[33m ([m[1;31morigin/feature/dynamic-pic[m[33m, [m[1;32mfeature/dynamic-pic[m[33m)[m feat(episode): add dynamic pic url
+[33mddbde54[m fix:used image/next
+[33mc7d8601[m style:smaller episode card
+[33m54656c3[m chore: merge basic-features
+[33m521ebc6[m chore: add context
+[33mf3faeb7[m[33m ([m[1;31morigin/basic-features[m[33m, [m[1;32mbasic-features[m[33m)[m added basic features
+[33m6960562[m chore(core): fetch episodes
+[33m35b272f[m initial commit
+[33m02abbb3[m Initial commit from Create Next App
