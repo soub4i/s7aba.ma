@@ -6,12 +6,18 @@ import Contact from "../components/Contact"
 import { getEpisodes } from "../content/episodes"
 import LastEpisode from '../components/LastEpisode'
 import TopThree from '../components/TopThree'
-
-
+import Head from 'next/head'
+import Config from '../config'
+      
 function HomePage({episodes, lastEpisode}) {
  
   return (
      <div >
+       <Head>
+        <title>{Config.websiteTitle} - Home</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <meta name="description" content={Config.websiteDescription} />
+      </Head>
       <div className="flex flex-wrap  md items-center md:h-screen relative justify-center  ">
       <Navbar></Navbar>
 
