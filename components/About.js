@@ -4,8 +4,8 @@ import Image from 'next/image'
 export default function About() {
   return (
     <section id="about" className="flex flex-col justify-center md:h-screen  bg-gray-100 bg-opacity-20 py-8 ">
-       <h1 className="text-4xl font-extrabold text-blue-300  pb-10  ">About Us</h1>
-      <div className="flex flex-col items-center   md:flex-row  w-2/3">
+       <h1 className="text-4xl font-extrabold text-gray-100  pb-10 threeD-text text-center ">About Us</h1>
+      <div className="flex flex-col items-center  justify-between md:flex-row  w-2/3">
      
       
         <div className=" flex  justify-center  items-center md:w-1/2 my-10 ">

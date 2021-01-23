@@ -35,7 +35,8 @@ a {
 }
 
 .gradient-text {
-  background: -webkit-linear-gradient(45deg, gray, rgb(68, 68, 68));
+  /* background: -webkit-linear-gradient(45deg, rgba(228, 227, 227, 0.5), rgb(53, 52, 52)); */
+  background: rgba(255, 255, 255, 0.6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -75,6 +76,11 @@ a {
 .animate-cloud {
   animation: animate calc(7s * var(--i)) infinite linear;
   overflow: hidden;
+}
+.threeD-text {
+  background: -webkit-linear-gradient(45deg, rgba(228, 227, 227, 0.5), rgb(17, 17, 17));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 @keyframes animate {
   0% {

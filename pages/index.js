@@ -1,12 +1,15 @@
-import Navbar from "../components/Navbar";
-import Link from "next/link";
-import About from "../components/About";
-import Episode from "../components/Episode";
-import Contact from "../components/Contact";
-import Image from "next/image";
-import { getEpisodes } from "../content/episodes";
+import React from "react";
+import Navbar from '../components/Navbar'
+import Link from 'next/link'
+import About from "../components/About"
+import Contact from "../components/Contact"
+import { getEpisodes } from "../content/episodes"
+import LastEpisode from '../components/LastEpisode'
+import TopThree from '../components/TopThree';
 
-function HomePage({ episodes }) {
+
+function HomePage({episodes, lastEpisode}) {
+ 
   return (
     <div>
       <Navbar></Navbar>
@@ -25,31 +28,40 @@ function HomePage({ episodes }) {
         <img src="cloud5.png" className='absolute bottom-0  animate-cloud  w-3/4 ' style={{"--i":6}}/>
         </div>
         <div className="text-center absolute  py-16 px-8 ">
-          <span className="uppercase text-xl text-black ">
+          <span className="uppercase text-xl text-white ">
             Minimalist Cloud Podcast
           </span>
-          <p className="text-4xl  font-bold py-2 gradient-text ">
+          <p className="text-4xl  font-bold py-2 gradient-text  ">
             Powered by Moroccan Darija & Tea
           </p>
           
         </div>
       </div>
 
-      <section id="episodes" className="flex flex-col items-center py-8">
-        <h1 className="text-4xl font-extrabold text-blue-300  pb-10 ">
-          Episodes
-        </h1>
-        {episodes.map((episode) => {
-          return <Episode episode={episode} key={episode.guid}></Episode>;
-        })}
-      </section>
+      
+
+      <About/> 
+
+        <section id="episodes" className="flex flex-col items-center">
+          <h1>Last Episode</h1>
+          <LastEpisode episode={lastEpisode} />  
+
+          <h1>Our Top 3 Episodes</h1>
+          <div >
+          <TopThree episodes={episodes} />  
+          </div>
+        </section> 
+
+
       <Contact></Contact>
     </div>
   );
 }
+
 HomePage.getInitialProps = async (ctx) => {
   const episodes = await getEpisodes();
-  return { episodes };
-};
+  return { episodes :  episodes.slice(Math.max(episodes.length -3, 0)) , lastEpisode : episodes[0]  }
+}
+
 
 export default HomePage;

@@ -29,17 +29,17 @@ export default function Navbar() {
             <ul className="p-4   flex flex-col md:flex-row md:justify-around md:items-start justify-between  items-center   h-full ">
             <button className="md:hidden self-end" onClick={handleClick}><i className=" fas fa-times text-3xl"></i></button>
               <li>
-                <Link href="#home" >
+                <Link href="/#home" >
                   <button className= "font-semibold text-gray-700  focus:outline-none hover:text-gray-200" onClick={handleClick}>Home</button>
                 </Link>
               </li>
-              <li> <Link href="#about">
+              <li> <Link href="/#about">
                   <button className="font-semibold text-gray-700  focus:outline-none   hover:text-gray-200 " onClick={handleClick}>About Us</button>
                 </Link></li>
-              <li> <Link href="#episodes">
+              <li> <Link href="episodes">
                   <button className="font-semibold text-gray-700 focus:outline-none hover:text-gray-200" onClick={handleClick}>Episodes</button>
                 </Link></li>
-              <li> <Link href="#contact">
+              <li> <Link href="/#contact">
                   <button className="font-semibold text-gray-700  focus:outline-none  hover:text-gray-200" onClick={handleClick}>Contact Us</button>
                 </Link></li>
                
