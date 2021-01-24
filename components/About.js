@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from 'next/image'
+import Config from '../config'
 
 export default function About() {
   return (
@@ -8,19 +9,17 @@ export default function About() {
       
         <div className=" flex  justify-center  items-center md:w-1/2 my-10 ">
             <div className="px-8 mx-4 filter-shadow profile-pic ">
-      <Image src="/profil.jpg" layout='fill' alt="profile" className="profile-pic"/>
+      <Image src={Config.hostAvatar} layout='fill' alt="profile" className="profile-pic"/>
       </div>
       <div >
-          <h1 className="font-thin">Abderrahim Soubai-Elidrisi</h1>
-          <Link href="https://twitter.com/soub4i" ><a className="text-blue-400">@soub4i</a></Link>
+          <h1 className="font-thin">{Config.hostName}</h1>
+          <Link href={"https://twitter.com/" + Config.hostTwitter} ><a className="text-blue-400">@{Config.hostTwitter}</a></Link>
       </div>
   </div>
       <div className="flex flex-col justify-center items-start md:w-1/2 p-6">
         <h1 className="text-3xl  font-bold  text-blue-300 mb-6">Hello!</h1>
         <p className=" font-thin  ">
-          My Name is Abderrahim Soubai, I'm a fullstack developer, Cloud
-          architect and your favorite podcast's host [insert your description
-          here ]{" "}
+        {Config.hostDescription}
         </p>
       </div>
     </section>
