@@ -1,23 +1,46 @@
-import { useContext, useState } from "react";
+import { useCallback, useContext, useState } from "react";
 import ReactPlayer from "react-player";
 import { Context } from "../../context";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay,faPause } from '@fortawesome/free-solid-svg-icons'
+import { library } from "@fortawesome/fontawesome-svg-core";
+import {fab, faChromecast} from "@fortawesome/free-brands-svg-icons";
+import { useMedia, useCast } from 'react-chromecast';
+
+library.add(fab,faChromecast);
 
 export default function Player({episode}) {
     
     const [isPlaying,setIsPlaying] = useState(true)
     const {  dispatch } = useContext(Context);
+    const media = useMedia()
+    const casty = useCast({
+      initialize_media_player: "DEFAULT_MEDIA_RECEIVER_APP_ID",
+      auto_initialize: true,
+  })
 
     const stop = () =>
     dispatch({
         type: "PLAY",
         payload: null,
       })
-    
 
+    const cast = useCallback(async (url) => {
 
+      try {
+        
+      if(casty.castReceiver) {
+        await casty.handleConnection();
+      }
 
+      if (media && url) {
+        await media.playMedia(url);
+      }
+      } catch (error) {}
+
+    }, [casty.castReceiver, casty.handleConnection, media]);
+
+  
     return (
         <>
             { episode ? <div className="bg-white w-full flex items-center p-2 shadow border" style={{
@@ -47,6 +70,9 @@ export default function Player({episode}) {
             <div className="font-semibold text-gray-700">
             <span className="mr-2" onClick={() => setIsPlaying(!isPlaying)} >
             <FontAwesomeIcon icon={ isPlaying ? faPause : faPlay  }  ></FontAwesomeIcon>
+            </span>
+            <span className="mr-2" onClick={() => cast(episode.audio)} >
+            <FontAwesomeIcon icon={['fab','chromecast']}  ></FontAwesomeIcon>
             </span>
               <span>
               {episode.title}
