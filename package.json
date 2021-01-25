@@ -1,24 +1,35 @@
 {
-  "name": "s7aba",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.34",
-    "@fortawesome/free-solid-svg-icons": "^5.15.2",
-    "@fortawesome/react-fontawesome": "^0.1.14",
-    "autoprefixer": "^10.1.0",
-    "cheerio": "^1.0.0-rc.3",
-    "next": "10.0.3",
-    "next-images": "^1.7.0",
-    "postcss": "^8.2.1",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
-    "react-player": "^2.8.1",
-    "tailwindcss": "^2.0.2"
-  }
+    "name": "s7aba",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "eslint --fix .",
+        "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+    },
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^1.2.34",
+        "@fortawesome/free-solid-svg-icons": "^5.15.2",
+        "@fortawesome/react-fontawesome": "^0.1.14",
+        "autoprefixer": "^10.1.0",
+        "cheerio": "^1.0.0-rc.3",
+        "next": "10.0.3",
+        "next-images": "^1.7.0",
+        "postcss": "^8.2.1",
+        "react": "17.0.1",
+        "react-dom": "17.0.1",
+        "react-player": "^2.8.1",
+        "tailwindcss": "^2.0.2"
+    },
+    "devDependencies": {
+        "eslint": "^7.18.0",
+        "eslint-config-prettier": "^7.2.0",
+        "eslint-plugin-jsx-a11y": "^6.4.1",
+        "eslint-plugin-prettier": "^3.3.1",
+        "eslint-plugin-react": "^7.22.0",
+        "prettier": "^2.2.1",
+        "undefined": "^0.1.0"
+    }
 }

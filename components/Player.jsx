@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import ReactPlayer from "react-player";
-import { Context } from "../../context";
+import { Context } from "../context";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay,faPause } from '@fortawesome/free-solid-svg-icons'
 
