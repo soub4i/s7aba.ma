@@ -13,7 +13,7 @@ function HomePage({episodes, lastEpisode}) {
   return (
     <div>
       <Navbar></Navbar>
-      <div className="flex flex-wrap  md items-center md:h-screen relative justify-center  overflow-hidden ">
+      <div className="flex flex-wrap   items-center h-screen relative justify-center  overflow-hidden ">
         <div className="blur-effect"> </div>
         <div className="w-full h-full">
         <img src="cloud1.png" className='absolute bottom-0 animate-cloud  w-3/4 ' style={{"--i":1}} />
@@ -42,11 +42,10 @@ function HomePage({episodes, lastEpisode}) {
 
       <About/> 
 
-        <section id="episodes" className="flex flex-col items-center">
-          <h1>Last Episode</h1>
-          <LastEpisode episode={lastEpisode} />  
-
-          <h1>Our Top 3 Episodes</h1>
+        <section id="episodes" className="flex flex-col items-center mx-4">
+        <h1 className="text-4xl font-extrabold text-blue-300  pb-6 pt-6  text-center tracking-wide ">Last Episode</h1>
+         <LastEpisode episode={lastEpisode} />  
+          <h1 className="text-4xl font-extrabold text-blue-300  pb-6 pt-6 text-center tracking-wide">Top 3 Episodes</h1>
           <div >
           <TopThree episodes={episodes} />  
           </div>

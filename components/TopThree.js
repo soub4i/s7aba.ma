@@ -13,7 +13,7 @@ export default function TopThree({episodes}) {
    
 
     const Ep = ({e}) => {
-        return (<div className=" lg:mb-4 md:mb-0">
+        return (<div className=" mb-6 md:mb-0 transform transition duration-500 hover:scale-105">
 
 
 <div className="bg-white md:mx-10 rounded-lg  shadow ">
@@ -26,7 +26,7 @@ export default function TopThree({episodes}) {
             {e.description}
             </div>
             <div className="mt-2  bottom-0  md:hidden lg:block">
-              <button onClick={() => play(e)} className="inline  text-4xl  text-blue-300" ><i class="fas fa-play-circle"></i></button>
+              <button onClick={() => play(e)} className="inline  text-4xl  text-blue-300 outline-none" ><i class="fas fa-play-circle"></i></button>
             </div>
           </div>
         </div>
