@@ -27,7 +27,7 @@ export default function About() {
                     <p className=" font-thin  ">{Config.hostDescription}</p>
                     <Link href={'https://twitter.com/' + Config.hostTwitter}>
                         <a className="text-blue-400 text-lg">
-                            <i class="fab fa-twitter"></i> @{Config.hostTwitter}
+                            <i className="fab fa-twitter"></i> @{Config.hostTwitter}
                         </a>
                     </Link>
                 </div>
