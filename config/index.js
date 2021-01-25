@@ -10,5 +10,5 @@ export default {
     hostTwitter: 'soub4i',
     hostAvatar: '/profil.jpg',
     hostDescription:
-        "My Name is Abderrahim Soubai, I'm a fullstack developer, Cloud architect and your favorite podcast's host [insert your description"
+        "My Name is Abderrahim Soubai, I'm a fullstack developer, Cloud architect and your favorite podcast's host"
 };

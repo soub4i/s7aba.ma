@@ -17,48 +17,80 @@ function HomePage({ episodes, lastEpisode }) {
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <meta name="description" content={Config.websiteDescription} />
             </Head>
-            <div className="flex flex-wrap  md items-center md:h-screen relative justify-center  ">
-                <Navbar></Navbar>
-
-                <div
-                    className=" h-1/3 md:w-1/2 flex flex-col  items-center content-center justify-between py-20 md:py-0 order-3 md:order-none"
-                    id="home">
-                    <div className="text-center">
-                        <span className="uppercase ">Minimalist Cloud Podcast</span>
-                        <p className="text-3xl  font-bold pt-2 gradient-text">
-                            Powered by Moroccan Darija & Tea
-                        </p>
-                    </div>
-                    <Link href="#about">
-                        <button className="hidden md:block border-solid border-blue-300 border-2 rounded-full px-3 py-1 focus:outline-none  hover:border-blue-200 my-10">
-                            <i className="fas fa-arrow-down text-xl text-blue-300"></i>
-                        </button>
-                    </Link>
-                </div>
-                <div className=" w-full md:w-1/2 md:h-screen relative bg-blue-300 ">
-                    <h1 className=" text-4xl sm:text-6xl font-bold mt-16 absolute  top-2 md:top-32 sm:top-20  left-4 md:left-2 text-white z-20">
-                        S7aba Podcast
-                    </h1>
-                    <h1 className="text-4xl sm:text-6xl font-bold mt-16 absolute top-12  md:top-52  sm:top-36 right-4 md:right-2 text-white z-20">
-                        سحابة بودكاست
-                    </h1>
+            <Navbar></Navbar>
+            <div className="flex flex-wrap   items-center h-screen relative justify-center  overflow-hidden ">
+                <div className="blur-effect"> </div>
+                <div className="w-full h-full">
                     <img
-                        src="https://source.unsplash.com/_alEmiTYyYk/1600x900"
-                        className="h-full md:h-screen w-full filter-grayscale object-fit"
-                        alt=""
+                        src="cloud1.png"
+                        className="absolute bottom-0 animate-cloud  w-3/4 "
+                        style={{ '--i': 1 }}
                     />
+                    <img
+                        src="cloud2.png"
+                        className="absolute bottom-0  animate-cloud  w-3/4 "
+                        style={{ '--i': 2 }}
+                    />
+                    <img
+                        src="cloud3.png"
+                        className="absolute bottom-0  animate-cloud  w-3/4 "
+                        style={{ '--i': 3 }}
+                    />
+                    <img
+                        src="cloud4.png"
+                        className="absolute bottom-0  animate-cloud  w-3/4 "
+                        style={{ '--i': 4 }}
+                    />
+                    <img
+                        src="cloud5.png"
+                        className="absolute bottom-0  animate-cloud  w-3/4 "
+                        style={{ '--i': 5 }}
+                    />
+                    <img
+                        src="cloud1.png"
+                        className="absolute bottom-0  animate-cloud  w-3/4 "
+                        style={{ '--i': 10 }}
+                    />
+                    <img
+                        src="cloud2.png"
+                        className="absolute bottom-0  animate-cloud  w-3/4 "
+                        style={{ '--i': 9 }}
+                    />
+                    <img
+                        src="cloud3.png"
+                        className="absolute bottom-0  animate-cloud  w-3/4 "
+                        style={{ '--i': 8 }}
+                    />
+                    <img
+                        src="cloud4.png"
+                        className="absolute bottom-0  animate-cloud  w-3/4 "
+                        style={{ '--i': 7 }}
+                    />
+                    <img
+                        src="cloud5.png"
+                        className="absolute bottom-0  animate-cloud  w-3/4 "
+                        style={{ '--i': 6 }}
+                    />
+                </div>
+                <div className="text-center absolute  py-16 px-8 ">
+                    <span className="uppercase text-xl text-white ">Minimalist Cloud Podcast</span>
+                    <p className="text-4xl  font-bold py-2 gradient-text  ">
+                        Powered by Moroccan Darija & Tea
+                    </p>
                 </div>
             </div>
 
             <About />
 
-            <section id="episodes" className="flex flex-col items-center">
-                <h1>Last Episode</h1>
+            <section id="episodes" className="flex flex-col items-center mx-4">
+                <h1 className="text-4xl font-extrabold text-blue-300  pb-6 pt-6  text-center tracking-wide ">
+                    Last Episode
+                </h1>
                 <LastEpisode episode={lastEpisode} />
-            </section>
-            <section id="episodes" className="flex flex-col items-center">
-                <h1>Our Top 3 Episodes</h1>
-                <div className="container">
+                <h1 className="text-4xl font-extrabold text-blue-300  pb-6 pt-6 text-center tracking-wide">
+                    Top 3 Episodes
+                </h1>
+                <div>
                     <TopThree episodes={episodes} />
                 </div>
             </section>
@@ -67,6 +99,7 @@ function HomePage({ episodes, lastEpisode }) {
         </div>
     );
 }
+
 HomePage.getInitialProps = async (ctx) => {
     const episodes = await getEpisodes();
     return { episodes: episodes.slice(Math.max(episodes.length - 3, 0)), lastEpisode: episodes[0] };

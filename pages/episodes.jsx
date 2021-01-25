@@ -9,7 +9,7 @@ function EpisodesPage({ episodes }) {
                 <Navbar></Navbar>
 
                 <div className="container">
-                    <section id="episodes" className="flex flex-col items-center  mt-12">
+                    <section id="episodes" className="flex flex-col items-center  mt-12 mx-4">
                         <Episodes episodes={episodes} />
                     </section>
                 </div>
