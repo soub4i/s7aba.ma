@@ -13,20 +13,20 @@ export default function TopThree({episodes}) {
    
 
     const Ep = ({e}) => {
-        return (<div className=" lg:w-1/3 mb-4 md:mb-0">
+        return (<div className=" mb-6 md:mb-0 transform transition duration-500 hover:scale-105">
 
 
-<div className="bg-white w-3/5 rounded-lg overflow-hidden shadow relative">
-          <img className="h-56 w-full object-cover object-bottom" src={e.image} alt={e.title} />
-          <div className="p-4 h-auto md:h-40 lg:h-56">
-            <a href="#" className="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
+<div className="bg-white md:mx-10 rounded-lg  shadow ">
+          <img className="h-56 w-full object-cover object-top" src={e.image} alt={e.title} />
+          <div className="p-3 h-auto md:h-40 lg:h-56 flex flex-col place-content-between">
+            <h1  className="blockfont-semibold text-gray-500  font-semibold mb-2 text-lg md:text-base lg:text-base">
             {e.title}
-            </a>
+            </h1>
             <div className="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm">
             {e.description}
             </div>
-            <div className="relative mt-2 lg:absolute bottom-0 mb-4 md:hidden lg:block">
-              <a onClick={() => play(e)} className="inline bg-gray-200 py-1 px-2 rounded-full text-xs  text-gray-700" href="#">Play this episode</a>
+            <div className="mt-2  bottom-0  md:hidden lg:block">
+              <button onClick={() => play(e)} className="inline  text-4xl  text-blue-300 outline-none" ><i class="fas fa-play-circle"></i></button>
             </div>
           </div>
         </div>
@@ -40,8 +40,8 @@ export default function TopThree({episodes}) {
 
 return (<main className="py-4">
 <div className="px-4">
-  <div className="block md:flex justify-between md:-mx-2">
-    
+  <div className="block md:flex   md:-mx-2 ">
+  
 
 { episodes ? episodes.map((episode)=><Ep e={episode} key={episode.guid}></Ep>) : null}    
 

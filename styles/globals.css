@@ -1,9 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Sacramento&display=swap');
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 @layer utilities {
   @variants dark {
     .filter-none {
@@ -21,7 +21,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -35,26 +35,63 @@ a {
 }
 
 .gradient-text {
-  background: -webkit-linear-gradient(45deg,white, black);
+  /* background: -webkit-linear-gradient(45deg, rgba(228, 227, 227, 0.5), rgb(53, 52, 52)); */
+  background: rgba(255, 255, 255, 0.6);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.title{
-  font-family: 'Sacramento', cursive;
+.title {
+  font-family: "Sacramento", cursive;
 }
-.active{
+.active {
   display: block;
-}   
-.profile-pic{
+}
+.profile-pic {
   width: 100px;
   height: 100px;
   border-radius: 50%;
-} 
-@media (min-width: 768px) { 
-  .profile-pic{
-  width: 180px;
-  height: 180px;
-}  }
-.social-media-logo{
+}
+@media (min-width: 768px) {
+  .profile-pic {
+    width: 180px;
+    height: 180px;
+  }
+}
+.social-media-logo {
   width: 1.75rem;
+}
+.blur-effect {
+  /* filter: blur(4px);
+  -webkit-filter: blur(4px); */
+  background-image: url("https://source.unsplash.com/xtgONQzGgOE/1600x900");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+.glass-effect {
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.699), transparent);
+  opacity: 0.8;
+  border-radius: 5px;
+}
+.animate-cloud {
+  animation: animate calc(7s * var(--i)) infinite linear;
+  overflow: hidden;
+}
+.threeD-text {
+  background: -webkit-linear-gradient(45deg, rgba(228, 227, 227, 0.5), rgb(17, 17, 17));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes animate {
+  0% {
+    opacity: 0%;
+    transform: scale(1);
+  }
+  25%,
+  75% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(3);
+  }
 }
