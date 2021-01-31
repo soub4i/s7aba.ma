@@ -8,7 +8,7 @@ export default {
         'https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy84ZGE2OTJjL3BvZGNhc3QvcnNz?sa=X&ved=0CAIQ9sEGahcKEwjYg8KBg87tAhUAAAAAHQAAAAAQBA',
     hostName: 'Abderrahim SOUBAI-ELIDRISI',
     hostTwitter: 'soub4i',
-    hostAvatar: '/profil.jpg',
+    hostAvatar: '/images/profil.jpg',
     hostDescription:
         "My Name is Abderrahim Soubai, I'm a fullstack developer, Cloud architect and your favorite podcast's host"
 };

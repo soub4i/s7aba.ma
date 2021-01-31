@@ -43,3 +43,11 @@ export const getEpisodes = async () => {
     const result = await data.text();
     return xml2json(result);
 };
+
+export const getEpisode = async (id) => {
+
+    const episodes = await getEpisodes();
+    const ep = episodes.find(ep => ep.guid === id)
+    return ep
+
+}

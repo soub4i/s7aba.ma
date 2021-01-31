@@ -30,7 +30,7 @@ export default function TopThree({ episodes }) {
                             <button
                                 onClick={() => play(e)}
                                 className="inline  text-4xl  text-blue-300 outline-none">
-                                <i class="fas fa-play-circle"></i>
+                                <i className="fas fa-play-circle"></i>
                             </button>
                         </div>
                     </div>
