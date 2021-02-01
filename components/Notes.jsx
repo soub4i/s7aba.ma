@@ -12,14 +12,14 @@ export default function Notes( {notes} ) {
             {notes && notes.data ? <div> 
     <div className="mt-6 lg:block">
     <ul className="text-sm">
-    { data.content.map((note, i) => <li key={i} > <span className="text-gray-600">{note[0]}</span> {note[1]}  </li> ) }
+    { notes.content.map((note, i) => <li key={i} > <span className="text-gray-600">{note[0]}</span> {note[1]}  </li> ) }
     </ul>
 
     </div>
     <div className="my-4 ">
         <span className=" text-xs text-gray-400">
         by <a href={`https://github.com/${notes.data.authorGithub}`}>
-        @{data.authorGithub}
+        @{notes.data.authorGithub}
         </a>
         </span>
     </div>
