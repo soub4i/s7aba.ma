@@ -11,9 +11,9 @@ export default function Navbar() {
     return (
         <header className=" flex flex-row justify-between pb-2  md:absolute md:top-0 w-full  z-50  px-6 md:my-0 sm:my-4 my-2 h-14 bg-white ">
             <div className="flex flex-row  justify-between w-full md:w-1/2 ">
-                <a href="/">
-                    <Image src="/images/logo.png" width={65} height={48} />{' '}
-                </a>
+                <Link href="/">
+                    <Image src="/images/logo.png" width={65} height={48} />
+                </Link>
 
                 <div className="hidden md:flex mt-6 md:mt-0 flex-row   justify-between w-full md:w-1/2 px-8  items-end">
                     <a href={'https://www.instagram.com/' + Config.instagram} target="_blank">
