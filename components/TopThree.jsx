@@ -1,15 +1,7 @@
-import { useContext } from 'react';
-import { Context } from '../context';
+import PlayButton from "./PlayButton";
+
 
 export default function TopThree({ episodes }) {
-    const { state, dispatch } = useContext(Context);
-
-    const play = (e) =>
-        dispatch({
-            type: 'PLAY',
-            payload: e
-        });
-
     const Ep = ({ e }) => {
         return (
             <div className=" mb-6 md:mb-0 transform transition duration-500 hover:scale-105">
@@ -27,11 +19,7 @@ export default function TopThree({ episodes }) {
                             {e.description}
                         </div>
                         <div className="mt-2  bottom-0  md:hidden lg:block">
-                            <button
-                                onClick={() => play(e)}
-                                className="inline  text-4xl  text-blue-300 outline-none">
-                                <i className="fas fa-play-circle"></i>
-                            </button>
+                            <PlayButton episode={e} />
                         </div>
                     </div>
                 </div>

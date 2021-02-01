@@ -1,17 +1,9 @@
 import Image from 'next/image';
-import React from "react"
-import { useContext } from 'react';
-import { Context } from '../context';
 import Notes from './Notes';
+import PlayButton from './PlayButton';
 
 export default function EpisodeDetails({ episode , notes }) {
-    const { dispatch } = useContext(Context);
 
-    const play = (e) =>
-        dispatch({
-            type: 'PLAY',
-            payload: e
-        });
     return (
         <div className="my-24 flex md:w-1/3">
             
@@ -38,11 +30,7 @@ export default function EpisodeDetails({ episode , notes }) {
                 <div className="author flex items-center -ml-3 my-3">
                     <div className="w-full">
                     <div className=" mt-2 lg:block">
-                    <button
-                        onClick={() => play(episode)}
-                        className="inline  text-xl  text-blue-300 outline-none">
-                        <i className="fas fa-play-circle"></i>
-                    </button>
+                    <PlayButton episode={episode} />
                         <a href={`https://github.com/AbderrahimSoubaiElidrissi/s7aba-website/tree/main/content/notes/${episode.guid}.md` } target="_blank" rel="noopener noreferrer">
                     <span className="inline  text-xl mx-2  text-gray-300 outline-none">
                         <i className="fa fa-bookmark"></i>

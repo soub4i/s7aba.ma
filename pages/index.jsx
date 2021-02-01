@@ -81,16 +81,16 @@ function HomePage({ episodes, lastEpisode }) {
             <About />
 
             <section id="episodes" className="flex flex-col justify-center items-center  md:h-screen py-8">
-                <h1 className="text-4xl font-extrabold text-blue-300  pb-6 pt-6  text-center tracking-wide ">
+                {/* <h1 className="text-4xl font-extrabold text-blue-300  pb-6 pt-6  text-center tracking-wide ">
                     Last Episode
-                </h1>
-                <LastEpisode episode={lastEpisode} />
-                {/* <h1 className="text-4xl font-extrabold text-blue-300  pb-6 pt-6 text-center tracking-wide">
-                    Top 3 Episodes
+                </h1> */}
+                {/* <LastEpisode episode={lastEpisode} /> */}
+                 <h1 className="text-4xl font-extrabold text-blue-300  pb-6 pt-6 text-center tracking-wide">
+                    Last 3 Episodes
                 </h1>
                 <div>
                     <TopThree episodes={episodes} />
-                </div> */}
+                </div> 
             </section>
 
             <Contact></Contact>
@@ -100,7 +100,7 @@ function HomePage({ episodes, lastEpisode }) {
 
 HomePage.getInitialProps = async (ctx) => {
     const episodes = await getEpisodes();
-    return { episodes: episodes.slice(Math.max(episodes.length - 3, 0)), lastEpisode: episodes[0] };
+    return { episodes: episodes.slice(0,3)};
 };
 
 export default HomePage;

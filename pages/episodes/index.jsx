@@ -4,9 +4,9 @@ import Episodes from '../../components/Episodes';
 function EpisodesPage({ episodes }) {
     return (
         <div>
-            <div className="flex flex-wrap  md items-center md:h-screen relative justify-center  ">
+            <div className="flex flex-wrap md:h-full  items-center h-screen relative justify-center mb-20 pt-20  ">
 
-                    <section id="episodes" className="flex flex-col items-center  mt-12 mx-4">
+                    <section id="episodes" className="flex flex-col items-center pb-16">
                         <Episodes episodes={episodes} />
                     </section>
             </div>

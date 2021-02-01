@@ -14,7 +14,7 @@ export default function Contact() {
                     Or fill the contact form down below
                 </h3>
             </div>
-            <form className="flex flex-col w-2/3 md:w-1/2">
+            <form onSubmit={(e) => { e.preventDefault(); alert('Mazal mkhadamch') } } className="flex flex-col w-2/3 md:w-1/2">
                 <label htmlFor="name" className="font-semibold text-gray-500 mb-2 ">
                     Full Name
                 </label>
@@ -44,7 +44,7 @@ export default function Contact() {
                 <button
                     type="submit"
                     className="p-1 self-center w-3/4 md:w-1/4 font-semibold text-blue-300 border-solid border-blue-300 border-2 rounded focus:outline-none focus:ring focus:border-blue-300 ">
-                    <i className="far fa-paper-plane pr-1"></i> Send{' '}
+                    <i className="far fa-paper-plane pr-1"></i> Send
                 </button>
             </form>
         </section>

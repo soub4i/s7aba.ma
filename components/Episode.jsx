@@ -1,19 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useContext } from 'react';
-import { Context } from '../context';
+import PlayButton from './PlayButton';
+
 
 export default function Episode({ episode }) {
-    const { dispatch } = useContext(Context);
-
-    const play = (e) =>
-        dispatch({
-            type: 'PLAY',
-            payload: e
-        });
+  
     return (
         
-        <div className="flex md:flex-row flex-col border border-solid border-gray-100 border-1 rounded md:w-2/3 my-4 w-full  shadow-lg">
+        <div className="flex md:flex-row flex-col border border-solid border-gray-100 border-1 rounded md:w-2/3 my-4 w-4/5	  shadow-lg">
             <div className="w-full md:w-1/4 ">
             <Link href="/episodes/[id]" as={ `/episodes/${episode.guid}` } >
 <a>
@@ -38,11 +32,8 @@ export default function Episode({ episode }) {
                 <p className="font-normal text-gray-700 mb-4">{episode.description}</p>
 
                 <div className=" mt-2    lg:block">
-                    <button
-                        onClick={() => play(episode)}
-                        className="inline  text-4xl  text-blue-300 outline-none">
-                        <i className="fas fa-play-circle"></i>
-                    </button>
+                     <PlayButton episode={episode} />
+
                 </div>
             </div>
             </div>
