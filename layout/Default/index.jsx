@@ -10,11 +10,9 @@ function DefaultLayout({ children }) {
 
     return (
         <>
-                <Navbar></Navbar>
+            <Navbar></Navbar>
             <Player episode={currentEpisode}></Player>
-        <div className="container mx-auto px-4">
-            {children}
-        </div>
+            <div className="container mx-auto px-4">{children}</div>
         </>
     );
 }

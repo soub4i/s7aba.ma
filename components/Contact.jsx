@@ -14,7 +14,12 @@ export default function Contact() {
                     Or fill the contact form down below
                 </h3>
             </div>
-            <form onSubmit={(e) => { e.preventDefault(); alert('Mazal mkhadamch') } } className="flex flex-col w-2/3 md:w-1/2">
+            <form
+                onSubmit={(e) => {
+                    e.preventDefault();
+                    alert('Mazal mkhadamch');
+                }}
+                className="flex flex-col w-2/3 md:w-1/2">
                 <label htmlFor="name" className="font-semibold text-gray-500 mb-2 ">
                     Full Name
                 </label>

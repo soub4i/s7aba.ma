@@ -29,7 +29,6 @@ export default function Navbar() {
                         <Image width={65} height={36} src="/images/google-podcasts.svg" />
                     </a>
                 </div>
-               
             </div>
             <button className="md:hidden  block " onClick={handleClick}>
                 <i className=" fas fa-bars font-extrabold text-gray-700 text-3xl "></i>
@@ -81,29 +80,25 @@ export default function Navbar() {
                     </li>
 
                     <div className="flex flex-row my-4 md:hidden">
-                    <a
-                        href={'https://www.instagram.com/' + Config.instagram}
-                        target="_blank"
-                        className="mx-2"
-                        >
-                        <Image src="/images/instagram.svg" width={24} height={22} />
-                    </a>
-                    <a
-                        href={'https://www.twitter.com/' + Config.twitter}
-                        target="_blank"
-                        className="mx-2"
-
-                        >
-                        <Image src="/images/twitter.svg" width={24} height={22} />
-                    </a>
-                    <a href={Config.spotify}  className="mx-2" target="_blank">
-                        <Image src="/images/spotify.svg"  width={24} height={22} />
-                    </a>
-                    <a href={Config.google}  className="mx-2" target="_blank">
-                        <Image width={24} height={22}   src="/images/google-podcasts.svg" />
-                    </a>
+                        <a
+                            href={'https://www.instagram.com/' + Config.instagram}
+                            target="_blank"
+                            className="mx-2">
+                            <Image src="/images/instagram.svg" width={24} height={22} />
+                        </a>
+                        <a
+                            href={'https://www.twitter.com/' + Config.twitter}
+                            target="_blank"
+                            className="mx-2">
+                            <Image src="/images/twitter.svg" width={24} height={22} />
+                        </a>
+                        <a href={Config.spotify} className="mx-2" target="_blank">
+                            <Image src="/images/spotify.svg" width={24} height={22} />
+                        </a>
+                        <a href={Config.google} className="mx-2" target="_blank">
+                            <Image width={24} height={22} src="/images/google-podcasts.svg" />
+                        </a>
                     </div>
-
                 </ul>
             </nav>
         </header>

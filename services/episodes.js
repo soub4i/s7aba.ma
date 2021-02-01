@@ -45,9 +45,7 @@ export const getEpisodes = async () => {
 };
 
 export const getEpisode = async (id) => {
-
     const episodes = await getEpisodes();
-    const ep = episodes.find(ep => ep.guid === id)
-    return ep
-
-}
+    const ep = episodes.find((ep) => ep.guid === id);
+    return ep;
+};

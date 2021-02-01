@@ -1,5 +1,4 @@
-import PlayButton from "./PlayButton";
-
+import PlayButton from './PlayButton';
 
 export default function TopThree({ episodes }) {
     const Ep = ({ e }) => {
