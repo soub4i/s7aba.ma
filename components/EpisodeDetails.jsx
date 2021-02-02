@@ -28,7 +28,7 @@ export default function EpisodeDetails({ episode, notes }) {
                             <div className=" mt-2 lg:block">
                                 <PlayButton episode={episode} />
                                 <a
-                                    href={`https://github.com/AbderrahimSoubaiElidrissi/s7aba-website/tree/main/content/notes/${episode.guid}.md`}
+                                    href={`https://github.com/AbderrahimSoubaiElidrissi/s7aba.ma/new/main/content/notes/${episode.guid}.md`}
                                     target="_blank"
                                     rel="noopener noreferrer">
                                     <span className="inline  text-xl mx-2  text-gray-300 outline-none">
