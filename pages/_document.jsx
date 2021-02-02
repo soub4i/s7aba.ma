@@ -1,5 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
+import config from '../config'
 class MyDocument extends Document {
     static async getInitialProps(ctx) {
         const initialProps = await Document.getInitialProps(ctx);
@@ -35,6 +36,18 @@ class MyDocument extends Document {
                     />
                     <meta name="msapplication-TileColor" content="#da532c" />
                     <meta name="theme-color" content="#ffffff"></meta>
+                    <script async  src={`https://www.googletagmanager.com/gtag/js?id=${config.GATrackId}`} />
+                    <script
+                        dangerouslySetInnerHTML={{
+                        __html: `
+                                window.dataLayer = window.dataLayer || [];
+                                function gtag(){dataLayer.push(arguments);}
+                                gtag('js', new Date());
+                                gtag('config', '${config.GATrackId}');
+                            `,
+                        }}
+                 />
+
                 </Head>
                 <body>
                     <Main />
