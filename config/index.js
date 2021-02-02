@@ -10,5 +10,6 @@ export default {
     hostTwitter: 'soub4i',
     hostAvatar: '/images/profil.jpg',
     hostDescription:
-        "My Name is Abderrahim Soubai, I'm a fullstack developer, Cloud architect and your favorite podcast's host"
+        "My Name is Abderrahim Soubai, I'm a fullstack developer, Cloud architect and your favorite podcast's host",
+    GATrackId: 'G-M8K0E8VXST'
 };
