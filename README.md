@@ -1,36 +1,71 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
-## Getting Started
+<p align="center">
+  <a href="https://www.s7aba.ma">
+    <img alt="S7aba" src="https://raw.githubusercontent.com/AbderrahimSoubaiElidrissi/s7aba.ma/main/public/images/logo.png" width="200" />
+  </a>
+</p>
+<h1 align="center">
+  S7aba podcast Website
+</h1>
 
-First, run the development server:
+S7aba is a Moroccan podcast about cloud computing powered by Darjira and Tea.
 
-```bash
-npm run dev
-# or
-yarn dev
+The website is built using [Next.js](http://nextjs.org)
+
+## 🚀 Quick start
+
+1.  **Fork and clone the project**
+
+    ```sh
+    git clone git@github.com:your-username/s7aba.ma.git
+    ```
+
+1.  **Start developing.**
+
+    Navigate into your new site’s directory and start it up.
+
+    ```sh
+    cd s7aba.ma/
+    npm install
+    npm run dev
+    ```
+
+## How to contribute ?
+
+**Add Episode Notes**
+
+#### Notes :
+
+Add new file to `content/notes/[id].md` with the `[id]` is the episode ID (You can find the id int the url on the episode details page `https://s7aba.ma/episodes/[id]` )
+
+In the Notes section, you need to collect the most important idea and try to find the right title for it using this format : `min:sec - title`.
+
+in the `metadata` section add your github handler (username) and if you still statue of the note (draft: true| false)
+
+```
+---
+authorGithub: AbderrahimSoubaiElidrissi
+draft: true
+---
+
+00:00 - Introduction : Welcoming
+
+00:20 - Introduction : Who Am I
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4.**Open the source code and start editing!**
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+You can add more features to the website or fix some issue. Make sure to check the issues tab first
 
-## Learn More
+## Licensing
 
-To learn more about Next.js, take a look at the following resources:
-
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The code in this project is licensed under MIT license.
 
 ## Contributors ✨
 
