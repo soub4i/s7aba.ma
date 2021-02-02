@@ -15,6 +15,16 @@
         "code",
         "review"
       ]
+    },
+    {
+      "login": "SihamBen",
+      "name": "SihamBen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58236622?v=4",
+      "profile": "https://github.com/SihamBen",
+      "contributions": [
+        "design",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
