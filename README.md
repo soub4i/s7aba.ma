@@ -13,7 +13,7 @@
   S7aba podcast Website
 </h1>
 
-S7aba is a Moroccan podact about cloud computing powered by Darjira and Tea.
+S7aba is a Moroccan podcast about cloud computing powered by Darjira and Tea.
 
 The website is built using [Next.js](http://nextjs.org)
 
