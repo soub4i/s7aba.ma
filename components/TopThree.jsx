@@ -11,7 +11,7 @@ export default function TopThree({ episodes }) {
                         alt={e.title}
                     />
                     <div className="p-3 h-auto md:h-40 lg:h-56 flex flex-col place-content-between">
-                        <h1 className="blockfont-semibold text-gray-500  font-semibold mb-2 text-lg md:text-base lg:text-base">
+                        <h1 className="blockfont-semibold text-gray-500  font-semibold text-lg md:text-base lg:text-base">
                             {e.title}
                         </h1>
                         <div className="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm">
