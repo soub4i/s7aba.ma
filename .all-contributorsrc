@@ -1,0 +1,36 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "AbderrahimSoubaiElidrissi",
+      "name": "Abderrahim SOUBAI-ELIDRISI",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11523791?v=4",
+      "profile": "https://soubai.me",
+      "contributions": [
+        "audio",
+        "code",
+        "review"
+      ]
+    },
+    {
+      "login": "SihamBen",
+      "name": "SihamBen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/58236622?v=4",
+      "profile": "https://github.com/SihamBen",
+      "contributions": [
+        "design",
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "s7aba.ma",
+  "projectOwner": "AbderrahimSoubaiElidrissi",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
