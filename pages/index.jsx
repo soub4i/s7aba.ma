@@ -4,6 +4,7 @@ import Contact from '../components/Contact';
 import { getEpisodes } from '../services/episodes';
 import LastEpisode from '../components/LastEpisode';
 import TopThree from '../components/TopThree';
+import Footer from '../components/Footer';
 import Head from 'next/head';
 import Config from '../config';
 
@@ -95,6 +96,7 @@ function HomePage({ episodes, lastEpisode }) {
             </section>
 
             <Contact></Contact>
+            <Footer></Footer>
         </div>
     );
 }
