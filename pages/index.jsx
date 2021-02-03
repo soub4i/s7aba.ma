@@ -2,7 +2,7 @@ import React from 'react';
 import About from '../components/About';
 import Contact from '../components/Contact';
 import { getEpisodes } from '../services/episodes';
-import LastEpisode from '../components/LastEpisode';
+// import LastEpisode from '../components/LastEpisode';
 import TopThree from '../components/TopThree';
 import Head from 'next/head';
 import Config from '../config';
@@ -74,10 +74,16 @@ function HomePage({ episodes, lastEpisode }) {
                     <p className="text-4xl  font-bold py-2 gradient-text  ">
                         Powered by Moroccan Darija & Tea
                     </p>
+
+                    <div className="pt-12">
+                        <a
+                            href="/#episodes"
+                            className="rounded-full font-bold px-4 py-3 bg-white text-blue-300">
+                            Let's go
+                        </a>
+                    </div>
                 </div>
             </div>
-
-            <About />
 
             <section
                 id="episodes"
@@ -94,12 +100,14 @@ function HomePage({ episodes, lastEpisode }) {
                 </div>
             </section>
 
+            <About />
+
             <Contact></Contact>
         </div>
     );
 }
 
-HomePage.getInitialProps = async (ctx) => {
+HomePage.getInitialProps = async () => {
     const episodes = await getEpisodes();
     return { episodes: episodes.slice(0, 3) };
 };
