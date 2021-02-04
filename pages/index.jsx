@@ -15,7 +15,7 @@ function HomePage({ episodes, lastEpisode }) {
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <meta name="description" content={Config.websiteDescription} />
             </Head>
-            <div className="flex flex-wrap    h-screen relative justify-center  overflow-hidden ">
+            <div className="flex flex-wrap hidden md:flex  h-screen relative justify-center  overflow-hidden ">
                 <div className="blur-effect"> </div>
                 <div className="w-full h-full">
                     <img
@@ -76,10 +76,10 @@ function HomePage({ episodes, lastEpisode }) {
                     </p>
 
                     <div className="pt-12">
-                        <a
-                            href="/#episodes"
-                            className="rounded-full font-bold px-4 py-3 bg-white text-blue-300">
-                            Let's go
+                        <a href="/#episodes" className="rounded-full font-bold px-4 py-3 bg-white">
+                            <span className=" text-blue-300">
+                                Start listening
+                            </span>
                         </a>
                     </div>
                 </div>
