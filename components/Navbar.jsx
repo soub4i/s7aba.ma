@@ -52,15 +52,6 @@ export default function Navbar() {
                         </Link>
                     </li>
                     <li className="my-2">
-                        <Link href="/#about">
-                            <button
-                                className="font-semibold text-gray-700  focus:outline-none   hover:text-blue-300 "
-                                onClick={handleClick}>
-                                About Us
-                            </button>
-                        </Link>
-                    </li>
-                    <li className="my-2">
                         <Link href="/episodes">
                             <button
                                 className="font-semibold text-gray-700 focus:outline-none hover:text-blue-300"
@@ -69,12 +60,23 @@ export default function Navbar() {
                             </button>
                         </Link>
                     </li>
+                
+                    <li className="my-2">
+                        <Link href="/#about">
+                            <button
+                                className="font-semibold text-gray-700  focus:outline-none   hover:text-blue-300 "
+                                onClick={handleClick}>
+                                About
+                            </button>
+                        </Link>
+                    </li>
+
                     <li className="my-2">
                         <Link href="/#contact">
                             <button
                                 className="font-semibold text-gray-700  focus:outline-none  hover:text-blue-300"
                                 onClick={handleClick}>
-                                Contact Us
+                                Contact
                             </button>
                         </Link>
                     </li>

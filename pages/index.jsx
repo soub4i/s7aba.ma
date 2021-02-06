@@ -2,7 +2,7 @@ import React from 'react';
 import About from '../components/About';
 import Contact from '../components/Contact';
 import { getEpisodes } from '../services/episodes';
-import LastEpisode from '../components/LastEpisode';
+// import LastEpisode from '../components/LastEpisode';
 import TopThree from '../components/TopThree';
 import Footer from '../components/Footer';
 import Head from 'next/head';
@@ -16,7 +16,7 @@ function HomePage({ episodes, lastEpisode }) {
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <meta name="description" content={Config.websiteDescription} />
             </Head>
-            <div className="flex flex-wrap    h-screen relative justify-center  overflow-hidden ">
+            <div className="flex flex-wrap hidden md:flex  h-screen relative justify-center  overflow-hidden ">
                 <div className="blur-effect"> </div>
                 <div className="w-full h-full">
                     <img
@@ -75,10 +75,16 @@ function HomePage({ episodes, lastEpisode }) {
                     <p className="text-4xl  font-bold py-2 gradient-text  ">
                         Powered by Moroccan Darija & Tea
                     </p>
+
+                    <div className="pt-12">
+                        <a href="/#episodes" className="rounded-full font-bold px-4 py-3 bg-white">
+                            <span className=" text-blue-300">
+                                Start listening
+                            </span>
+                        </a>
+                    </div>
                 </div>
             </div>
-
-            <About />
 
             <section
                 id="episodes"
@@ -95,13 +101,15 @@ function HomePage({ episodes, lastEpisode }) {
                 </div>
             </section>
 
+            <About />
+
             <Contact></Contact>
             <Footer></Footer>
         </div>
     );
 }
 
-HomePage.getInitialProps = async (ctx) => {
+HomePage.getInitialProps = async () => {
     const episodes = await getEpisodes();
     return { episodes: episodes.slice(0, 3) };
 };
