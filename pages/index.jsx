@@ -76,8 +76,8 @@ function HomePage({ episodes, lastEpisode }) {
                         Powered by Moroccan Darija & Tea
                     </p>
 
-                    <div className="pt-12">
-                        <a href="/#episodes" className="rounded-full font-bold px-4 py-3 bg-white">
+                    <div className="pt-12 pulsate-fwd  ">
+                        <a href="/#episodes" className="rounded-full font-bold px-4 py-3 bg-white border-gray-300 border-1 ">
                             <span className=" text-blue-300">
                                 Start listening
                             </span>
@@ -93,8 +93,8 @@ function HomePage({ episodes, lastEpisode }) {
                     Last Episode
                 </h1> */}
                 {/* <LastEpisode episode={lastEpisode} /> */}
-                <h1 className="text-4xl font-extrabold text-blue-300  pb-6 pt-6 text-center tracking-wide">
-                    Last 3 Episodes
+                <h1 className="text-4xl font-extrabold text-blue-300  pb-6 pt-8 text-center tracking-wide">
+                    Latest Episodes
                 </h1>
                 <div>
                     <TopThree episodes={episodes} />

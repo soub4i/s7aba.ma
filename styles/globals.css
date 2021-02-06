@@ -61,8 +61,6 @@ a {
     width: 1.75rem;
 }
 .blur-effect {
-    /* filter: blur(4px);
-  -webkit-filter: blur(4px); */
     background-image: url('https://source.unsplash.com/xtgONQzGgOE/1600x900');
     height: 100%;
     width: 100%;
@@ -77,11 +75,39 @@ a {
     animation: animate calc(7s * var(--i)) infinite linear;
     overflow: hidden;
 }
-.threeD-text {
-    background: -webkit-linear-gradient(45deg, rgba(228, 227, 227, 0.5), rgb(17, 17, 17));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.pulsate-fwd {
+    -webkit-animation: pulsate-fwd 1s ease-in-out 8 both;
+    animation: pulsate-fwd 1s ease-in-out 8 both;
 }
+@-webkit-keyframes pulsate-fwd {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+@keyframes pulsate-fwd {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+    50% {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+    }
+}
+
 @keyframes animate {
     0% {
         opacity: 0%;
@@ -93,5 +119,41 @@ a {
     }
     100% {
         transform: scale(3);
+    }
+}
+.swing-in-top-fwd {
+    -webkit-animation: swing-in-top-fwd 1s ease-in both;
+    animation: swing-in-top-fwd 1s ease-in both;
+}
+@-webkit-keyframes swing-in-top-fwd {
+    0% {
+        -webkit-transform: rotateX(-100deg);
+        transform: rotateX(-100deg);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        opacity: 1;
+    }
+}
+@keyframes swing-in-top-fwd {
+    0% {
+        -webkit-transform: rotateX(-100deg);
+        transform: rotateX(-100deg);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: rotateX(0deg);
+        transform: rotateX(0deg);
+        -webkit-transform-origin: top;
+        transform-origin: top;
+        opacity: 1;
     }
 }
