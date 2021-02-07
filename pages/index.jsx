@@ -23,51 +23,61 @@ function HomePage({ episodes, lastEpisode }) {
                         src="/images/cloud1.png"
                         className="absolute bottom-0 animate-cloud  w-3/4 "
                         style={{ '--i': 1 }}
+                        alt="cloud1"
                     />
                     <img
                         src="/images/cloud2.png"
                         className="absolute bottom-0  animate-cloud  w-3/4 "
                         style={{ '--i': 2 }}
+                        alt="cloud2"
                     />
                     <img
                         src="/images/cloud3.png"
                         className="absolute bottom-0  animate-cloud  w-3/4 "
                         style={{ '--i': 3 }}
+                        alt="cloud3"
                     />
                     <img
                         src="/images/cloud4.png"
                         className="absolute bottom-0  animate-cloud  w-3/4 "
                         style={{ '--i': 4 }}
+                        alt="cloud4"
                     />
                     <img
                         src="/images/cloud5.png"
                         className="absolute bottom-0  animate-cloud  w-3/4 "
                         style={{ '--i': 5 }}
+                        alt="cloud5"
                     />
                     <img
                         src="/images/cloud1.png"
                         className="absolute bottom-0  animate-cloud  w-3/4 "
                         style={{ '--i': 10 }}
+                        alt="cloud5"
                     />
                     <img
                         src="/images/cloud2.png"
                         className="absolute bottom-0  animate-cloud  w-3/4 "
                         style={{ '--i': 9 }}
+                        alt="cloud7"
                     />
                     <img
                         src="/images/cloud3.png"
                         className="absolute bottom-0  animate-cloud  w-3/4 "
                         style={{ '--i': 8 }}
+                        alt="cloud6"
                     />
                     <img
                         src="/images/cloud4.png"
                         className="absolute bottom-0  animate-cloud  w-3/4 "
                         style={{ '--i': 7 }}
+                        alt="cloud9"
                     />
                     <img
                         src="/images/cloud5.png"
                         className="absolute bottom-0  animate-cloud  w-3/4 "
                         style={{ '--i': 6 }}
+                        alt="cloud10"
                     />
                 </div>
                 <div className="text-center absolute  py-64">
@@ -77,10 +87,10 @@ function HomePage({ episodes, lastEpisode }) {
                     </p>
 
                     <div className="pt-12 pulsate-fwd  ">
-                        <a href="/#episodes" className="rounded-full font-bold px-4 py-3 bg-white border-gray-300 border-1 ">
-                            <span className=" text-blue-300">
-                                Start listening
-                            </span>
+                        <a
+                            href="/#episodes"
+                            className="rounded-full font-bold px-4 py-3 bg-white border-gray-300 border-1 ">
+                            <span className=" text-blue-300">Start listening</span>
                         </a>
                     </div>
                 </div>
