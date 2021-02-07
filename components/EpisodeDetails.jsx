@@ -4,7 +4,7 @@ import PlayButton from './PlayButton';
 
 export default function EpisodeDetails({ episode, notes }) {
     return (
-        <div className="my-24 flex md:w-1/3">
+        <div className="my-24 flex md:w-2/4">
             <div className="bg-white">
                 <div className="object-contain  w-full mx-auto">
                     <Image
