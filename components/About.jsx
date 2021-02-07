@@ -1,10 +1,31 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Config from '../config';
+import {useRef,useEffect} from 'react'
 
 export default function About() {
+    const about = useRef(null);
+    useEffect(() => {
+        // animate about
+      const observer = new IntersectionObserver(handleObserver, {
+        root: null,
+        rootMargin: "20px",
+        threshold: 0.5
+      });
+      if (about.current) {
+        observer.observe(about.current)
+      }
+  
+    }, []);
+    const handleObserver = (entities) => {
+        const target = entities[0];
+        if (target.isIntersecting) {
+          about.current.className=about.current.className+'swing-in-top-fwd'
+        }
+      }
     return (
         <section
+        ref={about}
             id="about"
             className="flex flex-col place-items-center place-content-center md:h-screen  bg-gray-100 bg-opacity-80 py-8 px-2 ">
             <h1 className="text-4xl font-extrabold text-blue-300  md:pb-20 pb-6  text-center tracking-wide">
