@@ -1,6 +1,6 @@
 export default function Notes({ notes }) {
     return (
-        <section id="about" className="bg-gray-100 bg-opacity-80 py-8 px-2 ">
+        <section id="notes" className="bg-gray-100 bg-opacity-80 py-8 px-2 md:w-auto w-full my-4 ">
             <h1 className="text-xl font-extrabold text-center tracking-wide">Notes</h1>
             <div className="">
                 {notes && notes.data ? (
