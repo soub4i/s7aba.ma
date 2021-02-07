@@ -3,8 +3,14 @@ import EpisodeDetails from '../../components/EpisodeDetails';
 import { getEpisodeNotes } from '../../services/notes';
 import Head from 'next/head';
 import config from '../../config';
+import { DiscussionEmbed, CommentEmbed } from 'disqus-react';
+import { useEffect, useState } from 'react';
 
 function EpisodePage(props) {
+    const [url, setUrl] = useState('');
+
+    useEffect(() => setUrl(window.location.href), []);
+
     return (
         <div className="my-12 grid justify-items-stretch">
             <Head>
@@ -17,6 +23,18 @@ function EpisodePage(props) {
 
             <section id="episodes" className="flex flex-col items-center ">
                 {props && props.episode ? <EpisodeDetails {...props} /> : null}
+            </section>
+            <section className="flex flex-col items-center">
+                <DiscussionEmbed
+                className="md:w-1/3 w-full px-2"
+                    shortname={config.disqusShortname}
+                    config={{
+                        url,
+                        identifier: props.episode.guid,
+                        title: props.episode.title,
+                        language: 'en_GB' //e.g. for Traditional Chinese (Taiwan)
+                    }}
+                />
             </section>
         </div>
     );

@@ -23,7 +23,7 @@ export default function EpisodeDetails({ episode, notes }) {
 
                     <p className="text-sm text-gray-700">{episode.description}</p>
                     <div className="flex text-right"></div>
-                    <div className="author flex items-center -ml-3 my-3">
+                    <div className="author flex items-center  my-3">
                         <div className="w-full">
                             <div className=" mt-2 lg:block">
                                 <PlayButton episode={episode} />
