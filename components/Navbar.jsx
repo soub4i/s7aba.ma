@@ -12,21 +12,21 @@ export default function Navbar() {
         <header className=" flex flex-row justify-between pb-2  md:absolute md:top-0 w-full  z-50  px-6 md:my-0 sm:my-4 my-2 h-14 bg-white ">
             <div className="flex flex-row  justify-between w-full md:w-1/2 ">
                 <Link  href="/">
-                    <a><Image className="cursor-pointer" src="/images/logo.png" width={65} height={48} /></a>
+                    <a><Image className="cursor-pointer" src="/images/logo.png" width={65} height={48} alt="logo"/></a>
                 </Link>
 
                 <div className="hidden md:flex mt-6 md:mt-0 flex-row   justify-between w-full md:w-1/2 px-8  items-end">
                     <a href={'https://www.instagram.com/' + Config.instagram} target="_blank">
-                        <Image src="/images/instagram.svg" width={65} height={36} />
+                        <Image src="/images/instagram.svg" width={65} height={36} alt="instagram"/>
                     </a>
                     <a href={'https://www.twitter.com/' + Config.twitter} target="_blank">
-                        <Image src="/images/twitter.svg" width={65} height={48} />
+                        <Image src="/images/twitter.svg" width={65} height={48} alt="twitter"/>
                     </a>
                     <a href={Config.spotify} target="_blank">
-                        <Image src="/images/spotify.svg" width={65} height={36} />
+                        <Image src="/images/spotify.svg" width={65} height={36} alt="spotify"/>
                     </a>
                     <a href={Config.google} target="_blank">
-                        <Image width={65} height={36} src="/images/google-podcasts.svg" />
+                        <Image width={65} height={36} src="/images/google-podcasts.svg" alt="google podcast" />
                     </a>
                 </div>
             </div>
@@ -86,19 +86,19 @@ export default function Navbar() {
                             href={'https://www.instagram.com/' + Config.instagram}
                             target="_blank"
                             className="mx-2">
-                            <Image src="/images/instagram.svg" width={24} height={22} />
+                            <Image src="/images/instagram.svg" width={24} height={22} alt="instagram"/>
                         </a>
                         <a
                             href={'https://www.twitter.com/' + Config.twitter}
                             target="_blank"
                             className="mx-2">
-                            <Image src="/images/twitter.svg" width={24} height={22} />
+                            <Image src="/images/twitter.svg" width={24} height={22} alt="twitter"/>
                         </a>
                         <a href={Config.spotify} className="mx-2" target="_blank">
-                            <Image src="/images/spotify.svg" width={24} height={22} />
+                            <Image alt='spotify' src="/images/spotify.svg" width={24} height={22} />
                         </a>
                         <a href={Config.google} className="mx-2" target="_blank">
-                            <Image width={24} height={22} src="/images/google-podcasts.svg" />
+                            <Image width={24} height={22} alt="google podcast" src="/images/google-podcasts.svg" />
                         </a>
                     </div>
                 </ul>

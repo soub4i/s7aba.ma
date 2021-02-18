@@ -21,51 +21,65 @@ function HomePage({ episodes, lastEpisode }) {
                 <div className="w-full h-full">
                     <img
                         src="/images/cloud1.png"
+                        alt="cloud1"
                         className="absolute bottom-0 animate-cloud  w-3/4 "
                         style={{ '--i': 1 }}
                     />
                     <img
                         src="/images/cloud2.png"
+                        alt="cloud2"
+
                         className="absolute bottom-0  animate-cloud  w-3/4 "
                         style={{ '--i': 2 }}
                     />
                     <img
                         src="/images/cloud3.png"
+                        alt="cloud3"
+
                         className="absolute bottom-0  animate-cloud  w-3/4 "
                         style={{ '--i': 3 }}
                     />
                     <img
                         src="/images/cloud4.png"
+                        alt="cloud4"
+
                         className="absolute bottom-0  animate-cloud  w-3/4 "
                         style={{ '--i': 4 }}
                     />
                     <img
                         src="/images/cloud5.png"
+                        alt="cloud6"
                         className="absolute bottom-0  animate-cloud  w-3/4 "
                         style={{ '--i': 5 }}
                     />
                     <img
-                        src="/images/cloud1.png"
+                        src="/images/cloud7.png"
+                        alt="cloud7"
                         className="absolute bottom-0  animate-cloud  w-3/4 "
                         style={{ '--i': 10 }}
                     />
                     <img
                         src="/images/cloud2.png"
+                        alt="cloud2"
                         className="absolute bottom-0  animate-cloud  w-3/4 "
                         style={{ '--i': 9 }}
                     />
                     <img
                         src="/images/cloud3.png"
+                        alt="cloud3"
                         className="absolute bottom-0  animate-cloud  w-3/4 "
                         style={{ '--i': 8 }}
                     />
                     <img
                         src="/images/cloud4.png"
+                        alt="cloud4"
                         className="absolute bottom-0  animate-cloud  w-3/4 "
                         style={{ '--i': 7 }}
                     />
                     <img
                         src="/images/cloud5.png"
+                        alt="cloud5"
+
                         className="absolute bottom-0  animate-cloud  w-3/4 "
                         style={{ '--i': 6 }}
                     />
