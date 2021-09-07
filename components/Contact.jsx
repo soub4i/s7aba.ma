@@ -25,7 +25,7 @@ export default function Contact() {
                 </label>
                 <input
                     type="text"
-                    className="mb-6 h-8 shadow-lg  rounded focus:outline-none focus:ring focus:border-blue-300"
+                    className="p-2 mb-6 h-8 shadow-lg  rounded focus:outline-none focus:ring focus:border-blue-300"
                     name="name"
                     required
                 />
@@ -34,16 +34,17 @@ export default function Contact() {
                 </label>
                 <input
                     type="email"
-                    className="mb-6 h-8 shadow-lg  rounded focus:outline-none focus:ring focus:border-blue-300"
+                    className="p-2 mb-6 h-8 shadow-lg  rounded focus:outline-none focus:ring focus:border-blue-300"
                     name="email"
                     required
                 />
                 <label htmlFor="msg" className="font-semibold text-gray-500 mb-2">
                     Message
                 </label>
-                <input
+                <textarea
                     type="text"
-                    className="  mb-6  h-28 shadow-lg  rounded focus:outline-none focus:ring focus:border-blue-300"
+                    rows="4"
+                    className="p-2 mb-6  h-28 shadow-lg  rounded focus:outline-none focus:ring focus:border-blue-300"
                     name="msg"
                 />
                 <button
