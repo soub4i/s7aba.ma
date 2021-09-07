@@ -23,6 +23,7 @@
         "raw-loader": "^4.0.2",
         "react": "17.0.1",
         "react-dom": "17.0.1",
+        "react-hook-form": "^7.15.0",
         "react-markdown": "^5.0.3",
         "react-player": "^2.8.1",
         "tailwindcss": "^2.0.2"
