@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
 
 export default function Contact() {
     const {
@@ -11,9 +12,20 @@ export default function Contact() {
 
     const [isSuccessSubmit, setIsSuccessSubmit] = useState(false);
 
-    const onSubmit = (data) => {
+    const onSubmit = async (data) => {
         try {
             //sending mail here
+            await axios({
+                url:
+                    process.env.NODE_ENV !== 'development'
+                        ? `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/contact`
+                        : 'http://localhost:3000/api/contact',
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                data
+            });
             setIsSuccessSubmit(true);
             setTimeout(() => {
                 reset({ name: '', email: '', msg: '' });
