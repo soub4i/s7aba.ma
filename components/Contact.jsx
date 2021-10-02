@@ -18,7 +18,7 @@ export default function Contact() {
             await axios({
                 url:
                     process.env.NODE_ENV !== 'development'
-                        ? `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/contact`
+                        ? `/api/contact`
                         : 'http://localhost:3000/api/contact',
                 method: 'POST',
                 headers: {
