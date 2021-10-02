@@ -1,7 +1,5 @@
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
-
+[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 <p align="center">
@@ -78,6 +76,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   <tr>
     <td align="center"><a href="https://soubai.me"><img src="https://avatars.githubusercontent.com/u/11523791?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abderrahim SOUBAI-ELIDRISI</b></sub></a><br /><a href="#audio-AbderrahimSoubaiElidrissi" title="Audio">🔊</a> <a href="https://github.com/AbderrahimSoubaiElidrissi/s7aba.ma/commits?author=AbderrahimSoubaiElidrissi" title="Code">💻</a> <a href="https://github.com/AbderrahimSoubaiElidrissi/s7aba.ma/pulls?q=is%3Apr+reviewed-by%3AAbderrahimSoubaiElidrissi" title="Reviewed Pull Requests">👀</a></td>
     <td align="center"><a href="https://github.com/SihamBen"><img src="https://avatars.githubusercontent.com/u/58236622?v=4?s=100" width="100px;" alt=""/><br /><sub><b>SihamBen</b></sub></a><br /><a href="#design-SihamBen" title="Design">🎨</a> <a href="https://github.com/AbderrahimSoubaiElidrissi/s7aba.ma/commits?author=SihamBen" title="Code">💻</a></td>
+    <td align="center"><a href="http://ysfbenali.com"><img src="https://avatars.githubusercontent.com/u/26151852?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Youssef BenAli</b></sub></a><br /><a href="https://github.com/AbderrahimSoubaiElidrissi/s7aba.ma/commits?author=ysfBenali" title="Code">💻</a></td>
   </tr>
 </table>
 
