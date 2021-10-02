@@ -1,4 +1,41 @@
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import axios from 'axios';
+
 export default function Contact() {
+    const {
+        register,
+        handleSubmit,
+        reset,
+        formState: { isSubmitting, isSubmitSuccessful, errors }
+    } = useForm();
+
+    const [isSuccessSubmit, setIsSuccessSubmit] = useState(false);
+
+    const onSubmit = async (data) => {
+        try {
+            //sending mail here
+            await axios({
+                url:
+                    process.env.NODE_ENV !== 'development'
+                        ? `${process.env.NEXT_PUBLIC_WEBSITE_URL}/api/contact`
+                        : 'http://localhost:3000/api/contact',
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                data
+            });
+            setIsSuccessSubmit(true);
+            setTimeout(() => {
+                reset({ name: '', email: '', msg: '' });
+            }, 3000);
+        } catch (err) {
+            setIsSuccessSubmit(false);
+            alert('An error occurred while sending the message. please try again.');
+        }
+    };
+
     return (
         <section
             id="contact"
@@ -14,19 +51,15 @@ export default function Contact() {
                     Or fill the contact form down below
                 </h3>
             </div>
-            <form
-                onSubmit={(e) => {
-                    e.preventDefault();
-                    alert('Mazal mkhadamch');
-                }}
-                className="flex flex-col w-2/3 md:w-1/2">
+            <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col w-2/3 md:w-1/2">
                 <label htmlFor="name" className="font-semibold text-gray-500 mb-2 ">
                     Full Name
                 </label>
                 <input
                     type="text"
-                    className="mb-6 h-8 shadow-lg  rounded focus:outline-none focus:ring focus:border-blue-300"
+                    className="p-2 mb-6 h-8 shadow-lg  rounded focus:outline-none focus:ring focus:border-blue-300"
                     name="name"
+                    {...register('name')}
                     required
                 />
                 <label htmlFor="email" className="font-semibold text-gray-500 mb-2 ">
@@ -34,22 +67,39 @@ export default function Contact() {
                 </label>
                 <input
                     type="email"
-                    className="mb-6 h-8 shadow-lg  rounded focus:outline-none focus:ring focus:border-blue-300"
+                    className="p-2 mb-6 h-8 shadow-lg  rounded focus:outline-none focus:ring focus:border-blue-300"
                     name="email"
+                    {...register('email')}
                     required
                 />
                 <label htmlFor="msg" className="font-semibold text-gray-500 mb-2">
                     Message
                 </label>
-                <input
+                <textarea
                     type="text"
-                    className="  mb-6  h-28 shadow-lg  rounded focus:outline-none focus:ring focus:border-blue-300"
+                    rows="4"
+                    className="p-2 mb-6  h-28 shadow-lg  rounded focus:outline-none focus:ring focus:border-blue-300"
                     name="msg"
+                    {...register('msg')}
+                    required
                 />
+                {isSubmitSuccessful && isSuccessSubmit && (
+                    <div>
+                        <h5 className="font-semibold text-green-500 mb-4">
+                            We have received your message, We will get back to you ASAP :) .
+                        </h5>
+                    </div>
+                )}
                 <button
                     type="submit"
-                    className="p-1 self-center w-3/4 md:w-1/4 font-semibold text-blue-300 border-solid border-blue-300 border-2 rounded focus:outline-none focus:ring focus:border-blue-300 ">
-                    <i className="far fa-paper-plane pr-1"></i> Send
+                    className="p-1 self-center w-3/4 md:w-1/4 font-semibold text-blue-300 border-solid border-blue-300 border-2 rounded focus:outline-none focus:ring focus:border-blue-300 "
+                    disabled={isSubmitting}>
+                    {!isSubmitting && (
+                        <span>
+                            <i className="far fa-paper-plane pr-1"></i>Send
+                        </span>
+                    )}
+                    {isSubmitting && <i class="fas fa-spinner fa-spin"></i>}
                 </button>
             </form>
         </section>
