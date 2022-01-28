@@ -11,7 +11,7 @@ export default function Navbar() {
             <div className="container flex flex-wrap justify-between items-center mx-auto">
                 <a href="/" className="flex">
                     <span className="self-center text-lg font-semibold whitespace-nowrap dark:text-white">
-                        S7aba Podcast
+                        S7aba.ma
                     </span>
                 </a>
                 <button

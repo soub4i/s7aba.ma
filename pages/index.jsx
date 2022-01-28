@@ -25,9 +25,12 @@ function HomePage({ episodes }) {
                         <div className="sm:text-center lg:text-left">
                             <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-4xl md:text-5xl">
                                 <span className="block xl:inline">
-                                    {' '}
-                                    <span className="text-indigo-600 font-mono "> S7aba </span>a
-                                    podcast
+                                    <span
+                                        className="text-indigo-600 mr-1"
+                                        style={{ fontFamily: 'Open Sans' }}>
+                                        S7aba
+                                    </span>
+                                    a podcast
                                 </span>
                                 <span className="block ">in the cloud</span>
                             </h1>
