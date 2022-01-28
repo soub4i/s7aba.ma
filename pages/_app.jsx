@@ -1,7 +1,8 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import 'tailwindcss/tailwind.css';
 import '../styles/globals.css';
-import { Context, Provider } from '../context';
-import { useContext } from 'react';
+import { Provider } from '../context';
 import DefaultLayout from '../layout/Default';
 
 function MyApp({ Component, pageProps }) {
@@ -12,5 +13,8 @@ function MyApp({ Component, pageProps }) {
         </Provider>
     );
 }
-
+MyApp.propTypes = {
+    Component: PropTypes.elementType.isRequired,
+    pageProps: PropTypes.object.isRequired
+};
 export default MyApp;

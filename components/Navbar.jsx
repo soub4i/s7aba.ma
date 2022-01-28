@@ -1,108 +1,117 @@
+import React, { useState } from 'react';
 import Link from 'next/link';
-import { useRef, useState } from 'react';
-import Image from 'next/image';
-import Config from '../config';
-export default function Navbar() {
-    const nav = useRef(null);
-    const [isActive, setActive] = useState(false);
-    function handleClick(e) {
-        setActive(!isActive);
-    }
-    return (
-        <header className=" flex flex-row justify-between pb-2  md:absolute md:top-0 w-full  z-50  px-6 md:my-0 sm:my-4 my-2 h-14 bg-white ">
-            <div className="flex flex-row  justify-between w-full md:w-1/2 ">
-                <Link  href="/">
-                    <a><Image className="cursor-pointer" src="/images/logo.png" width={65} height={48} /></a>
-                </Link>
+// import { useRef, useState } from 'react';
+// import Config from '../config';
 
-                <div className="hidden md:flex mt-6 md:mt-0 flex-row   justify-between w-full md:w-1/2 px-8  items-end">
-                    <a href={'https://www.instagram.com/' + Config.instagram} target="_blank">
-                        <Image src="/images/instagram.svg" width={65} height={36} />
-                    </a>
-                    <a href={'https://www.twitter.com/' + Config.twitter} target="_blank">
-                        <Image src="/images/twitter.svg" width={65} height={48} />
-                    </a>
-                    <a href={Config.spotify} target="_blank">
-                        <Image src="/images/spotify.svg" width={65} height={36} />
-                    </a>
-                    <a href={Config.google} target="_blank">
-                        <Image width={65} height={36} src="/images/google-podcasts.svg" />
-                    </a>
+export default function Navbar() {
+    const [isOpen, setIsOpen] = useState(false);
+
+    return (
+        <nav className="text-gray-700 body-font border-b border-gray-200  border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
+            <div className="container flex flex-wrap justify-between items-center mx-auto">
+                <a href="/" className="flex">
+                    <span className="self-center text-lg font-semibold whitespace-nowrap dark:text-white">
+                        S7aba Podcast
+                    </span>
+                </a>
+                <button
+                    data-collapse-toggle="mobile-menu"
+                    type="button"
+                    className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="mobile-menu-2"
+                    aria-expanded="false"
+                    onClick={() => setIsOpen(!isOpen)}>
+                    <span className="sr-only">Open main menu</span>
+
+                    {isOpen ? (
+                        <svg
+                            className=" w-6 h-6"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                fillRule="evenodd"
+                                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                clipRule="evenodd"></path>
+                        </svg>
+                    ) : (
+                        <svg
+                            className="w-6 h-6"
+                            fill="currentColor"
+                            viewBox="0 0 20 20"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                fillRule="evenodd"
+                                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                                clipRule="evenodd"></path>
+                        </svg>
+                    )}
+                </button>
+                <ul className="hidden sm:flex text-center  flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                    <li>
+                        <Link
+                            className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-indigo-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                            href="/#home">
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-indigo-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                            href="/episodes">
+                            Episodes
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-indigo-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                            href="/#about">
+                            About
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-indigo-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                            href="/#contact">
+                            Contact
+                        </Link>
+                    </li>
+                </ul>
+                <div
+                    className={`w-full  md:w-auto ${!isOpen ? 'hidden' : 'block'}`}
+                    id="mobile-menu">
+                    <ul className="text-center flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
+                        <li>
+                            <Link
+                                className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-indigo-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                href="/#home">
+                                Home
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-indigo-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                href="/episodes">
+                                Episodes
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-indigo-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                href="/#about">
+                                About
+                            </Link>
+                        </li>
+                        <li>
+                            <Link
+                                className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-indigo-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                                href="/#contact">
+                                Contact
+                            </Link>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <button className="md:hidden  block " onClick={handleClick}>
-                <i className=" fas fa-bars font-extrabold text-gray-700 text-3xl "></i>
-            </button>
-            <nav
-                ref={nav}
-                className={`right-0 top-16  md:top-1   absolute md:relative md:w-1/2  md:block bg-white md:bg-transparent md:h-screen w-screen z-50 hidden ${
-                    isActive ? 'active' : ''
-                }`}>
-                <ul className="  flex flex-col md:flex-row md:justify-around md:items-start justify-between  items-center   h-full ">
-                    <button className="pr-8 md:hidden block self-end" onClick={handleClick}>
-                        <i className=" fas fa-times text-3xl"></i>
-                    </button>
-                    <li className="my-2">
-                        <Link href="/#home">
-                            <button
-                                className="font-semibold text-gray-700  focus:outline-none hover:text-blue-300"
-                                onClick={handleClick}>
-                                Home
-                            </button>
-                        </Link>
-                    </li>
-                    <li className="my-2">
-                        <Link href="/episodes">
-                            <button
-                                className="font-semibold text-gray-700 focus:outline-none hover:text-blue-300"
-                                onClick={handleClick}>
-                                Episodes
-                            </button>
-                        </Link>
-                    </li>
-                
-                    <li className="my-2">
-                        <Link href="/#about">
-                            <button
-                                className="font-semibold text-gray-700  focus:outline-none   hover:text-blue-300 "
-                                onClick={handleClick}>
-                                About
-                            </button>
-                        </Link>
-                    </li>
-
-                    <li className="my-2">
-                        <Link href="/#contact">
-                            <button
-                                className="font-semibold text-gray-700  focus:outline-none  hover:text-blue-300"
-                                onClick={handleClick}>
-                                Contact
-                            </button>
-                        </Link>
-                    </li>
-
-                    <div className="flex flex-row my-4 md:hidden">
-                        <a
-                            href={'https://www.instagram.com/' + Config.instagram}
-                            target="_blank"
-                            className="mx-2">
-                            <Image src="/images/instagram.svg" width={24} height={22} />
-                        </a>
-                        <a
-                            href={'https://www.twitter.com/' + Config.twitter}
-                            target="_blank"
-                            className="mx-2">
-                            <Image src="/images/twitter.svg" width={24} height={22} />
-                        </a>
-                        <a href={Config.spotify} className="mx-2" target="_blank">
-                            <Image src="/images/spotify.svg" width={24} height={22} />
-                        </a>
-                        <a href={Config.google} className="mx-2" target="_blank">
-                            <Image width={24} height={22} src="/images/google-podcasts.svg" />
-                        </a>
-                    </div>
-                </ul>
-            </nav>
-        </header>
+        </nav>
     );
 }

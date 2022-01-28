@@ -1,3 +1,6 @@
+import React from 'react';
+import PropTypes from 'prop-types';
+
 export default function Notes({ notes }) {
     return (
         <section id="notes" className="bg-gray-100 bg-opacity-80 py-8 px-2 md:w-auto w-full my-4 ">
@@ -39,3 +42,6 @@ export default function Notes({ notes }) {
         </section>
     );
 }
+Notes.propTypes = {
+    notes: PropTypes.object.isRequired
+};

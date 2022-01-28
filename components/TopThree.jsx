@@ -1,9 +1,12 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import PlayButton from './PlayButton';
+import Episode from './Episode';
 
 export default function TopThree({ episodes }) {
     const Ep = ({ e }) => {
         return (
-            <div className=" mb-6 md:mb-0 transform transition duration-500 hover:scale-105">
+            <div className="md:mb-0 transform transition duration-500 hover:scale-105">
                 <div className="bg-white md:mx-10 rounded-lg  shadow ">
                     <img
                         className="h-56 w-full object-cover object-top"
@@ -25,16 +28,23 @@ export default function TopThree({ episodes }) {
             </div>
         );
     };
-
+    Ep.propTypes = {
+        e: PropTypes.object.isRequired
+    };
     return (
         <main className="py-4">
             <div className="px-4">
-                <div className="block md:flex   md:-mx-2 ">
+                <div className="sm:flex">
                     {episodes
-                        ? episodes.map((episode) => <Ep e={episode} key={episode.guid}></Ep>)
+                        ? episodes.map((episode) => (
+                              <Episode episode={episode} key={episode.guid}></Episode>
+                          ))
                         : null}
                 </div>
             </div>
         </main>
     );
 }
+TopThree.propTypes = {
+    episodes: PropTypes.array
+};

@@ -1,9 +1,11 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import { getEpisodes, getEpisode } from '../../services/episodes';
 import EpisodeDetails from '../../components/EpisodeDetails';
 import { getEpisodeNotes } from '../../services/notes';
 import Head from 'next/head';
 import config from '../../config';
-import { DiscussionEmbed, CommentEmbed } from 'disqus-react';
+import { DiscussionEmbed } from 'disqus-react';
 import { useEffect, useState } from 'react';
 
 function EpisodePage(props) {
@@ -26,7 +28,7 @@ function EpisodePage(props) {
             </section>
             <section className="flex flex-col items-center">
                 <DiscussionEmbed
-                className="md:w-1/3 w-full px-2"
+                    className="md:w-1/3 w-full px-2"
                     shortname={config.disqusShortname}
                     config={{
                         url,
@@ -39,6 +41,10 @@ function EpisodePage(props) {
         </div>
     );
 }
+EpisodePage.propTypes = {
+    episode: PropTypes.object,
+    notes: PropTypes.array
+};
 export const getStaticProps = async ({ params }) => {
     const episode = await getEpisode(params.id);
     const notes = await getEpisodeNotes(params.id);
@@ -51,6 +57,6 @@ export const getStaticPaths = async () => {
     const paths = ids.map((id) => {
         return { params: { id } };
     });
-    return { paths, fallback: false };
+    return { paths, fallback: 'blocking' };
 };
 export default EpisodePage;

@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import { useContext, useState } from 'react';
 import { Context } from '../context';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -18,12 +20,15 @@ export default function PlayButton({ episode }) {
 
     return (
         <>
-        <button
-            onClick={() => play(episode)}
-            className="inline  text-2xl  text-blue-300 outline-none">
-            <FontAwesomeIcon
-                icon={currentlyPlayed ? faBroadcastTower : faPlay}></FontAwesomeIcon>
-        </button>
+            <button
+                onClick={() => play(episode)}
+                className="inline  text-2xl  text-indigo-500 outline-none">
+                <FontAwesomeIcon
+                    icon={currentlyPlayed ? faBroadcastTower : faPlay}></FontAwesomeIcon>
+            </button>
         </>
     );
 }
+PlayButton.propTypes = {
+    episode: PropTypes.object.isRequired
+};
