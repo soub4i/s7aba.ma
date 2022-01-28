@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import { useContext, useState } from 'react';
 import ReactPlayer from 'react-player';
 import { Context } from '../context';
@@ -73,3 +75,7 @@ export default function Player({ episode }) {
         </>
     );
 }
+
+Player.propTypes = {
+    episode: PropTypes.array.isRequired
+};

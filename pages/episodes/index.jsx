@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import { getEpisodes } from '../../services/episodes';
 import Episodes from '../../components/Episodes';
 import Head from 'next/head';
@@ -19,9 +21,13 @@ function EpisodesPage({ episodes }) {
         </div>
     );
 }
-EpisodesPage.getInitialProps = async (ctx) => {
+EpisodesPage.getInitialProps = async () => {
     const episodes = await getEpisodes();
     return { episodes };
+};
+
+EpisodesPage.propTypes = {
+    episodes: PropTypes.array
 };
 
 export default EpisodesPage;

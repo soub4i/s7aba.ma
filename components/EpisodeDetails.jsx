@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import Image from 'next/image';
 import Notes from './Notes';
 import PlayButton from './PlayButton';
@@ -47,3 +49,8 @@ export default function EpisodeDetails({ episode, notes }) {
         </div>
     );
 }
+
+EpisodeDetails.propTypes = {
+    episode: PropTypes.string.isRequired,
+    notes: PropTypes.string.isRequired
+};

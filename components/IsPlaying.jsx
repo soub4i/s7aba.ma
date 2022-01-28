@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useContext } from 'react';
 import { Context } from '../context';
@@ -11,13 +13,14 @@ export default function IsPlaying({ episode }) {
     const isPlaying = episode && currentEpisode && episode.guid === currentEpisode.guid;
     return (
         <>
-            {' '}
             {isPlaying ? (
                 <span>
-                    {' '}
                     <FontAwesomeIcon icon={faBroadcastTower} pulse></FontAwesomeIcon>{' '}
                 </span>
-            ) : null}{' '}
+            ) : null}
         </>
     );
 }
+IsPlaying.propTypes = {
+    episode: PropTypes.array.isRequired
+};

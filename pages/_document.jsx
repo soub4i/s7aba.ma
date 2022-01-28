@@ -1,6 +1,7 @@
+import React from 'react';
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 
-import config from '../config'
+import config from '../config';
 class MyDocument extends Document {
     static async getInitialProps(ctx) {
         const initialProps = await Document.getInitialProps(ctx);
@@ -29,25 +30,24 @@ class MyDocument extends Document {
                         sizes="16x16"
                         href="/favicons/favicon-16x16.png"
                     />
-                    <link
-                        rel="mask-icon"
-                        href="/favicons/safari-pinned-tab.svg"
-                        color="#5bbad5"
-                    />
+                    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5" />
                     <meta name="msapplication-TileColor" content="#da532c" />
                     <meta name="theme-color" content="#ffffff"></meta>
-                    <script async  src={`https://www.googletagmanager.com/gtag/js?id=${config.GATrackId}`} />
+                    <link rel="stylesheet" href="styles/global.css" />
+                    <script
+                        async
+                        src={`https://www.googletagmanager.com/gtag/js?id=${config.GATrackId}`}
+                    />
                     <script
                         dangerouslySetInnerHTML={{
-                        __html: `
+                            __html: `
                                 window.dataLayer = window.dataLayer || [];
                                 function gtag(){dataLayer.push(arguments);}
                                 gtag('js', new Date());
                                 gtag('config', '${config.GATrackId}');
-                            `,
+                            `
                         }}
-                 />
-
+                    />
                 </Head>
                 <body>
                     <Main />

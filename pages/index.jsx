@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import About from '../components/About';
 import Contact from '../components/Contact';
 import { getEpisodes } from '../services/episodes';
@@ -7,8 +8,9 @@ import TopThree from '../components/TopThree';
 import Footer from '../components/Footer';
 import Head from 'next/head';
 import Config from '../config';
+import Link from 'next/link';
 
-function HomePage({ episodes, lastEpisode }) {
+function HomePage({ episodes }) {
     return (
         <div>
             <Head>
@@ -16,94 +18,73 @@ function HomePage({ episodes, lastEpisode }) {
                 <meta name="viewport" content="initial-scale=1.0, width=device-width" />
                 <meta name="description" content={Config.websiteDescription} />
             </Head>
-            <div className="flex flex-wrap hidden md:flex  h-screen relative justify-center  overflow-hidden ">
-                <div className="blur-effect"> </div>
-                <div className="w-full h-full">
-                    <img
-                        src="/images/cloud1.png"
-                        className="absolute bottom-0 animate-cloud  w-3/4 "
-                        style={{ '--i': 1 }}
-                        alt="cloud1"
-                    />
-                    <img
-                        src="/images/cloud2.png"
-                        className="absolute bottom-0  animate-cloud  w-3/4 "
-                        style={{ '--i': 2 }}
-                        alt="cloud2"
-                    />
-                    <img
-                        src="/images/cloud3.png"
-                        className="absolute bottom-0  animate-cloud  w-3/4 "
-                        style={{ '--i': 3 }}
-                        alt="cloud3"
-                    />
-                    <img
-                        src="/images/cloud4.png"
-                        className="absolute bottom-0  animate-cloud  w-3/4 "
-                        style={{ '--i': 4 }}
-                        alt="cloud4"
-                    />
-                    <img
-                        src="/images/cloud5.png"
-                        className="absolute bottom-0  animate-cloud  w-3/4 "
-                        style={{ '--i': 5 }}
-                        alt="cloud5"
-                    />
-                    <img
-                        src="/images/cloud1.png"
-                        className="absolute bottom-0  animate-cloud  w-3/4 "
-                        style={{ '--i': 10 }}
-                        alt="cloud5"
-                    />
-                    <img
-                        src="/images/cloud2.png"
-                        className="absolute bottom-0  animate-cloud  w-3/4 "
-                        style={{ '--i': 9 }}
-                        alt="cloud7"
-                    />
-                    <img
-                        src="/images/cloud3.png"
-                        className="absolute bottom-0  animate-cloud  w-3/4 "
-                        style={{ '--i': 8 }}
-                        alt="cloud6"
-                    />
-                    <img
-                        src="/images/cloud4.png"
-                        className="absolute bottom-0  animate-cloud  w-3/4 "
-                        style={{ '--i': 7 }}
-                        alt="cloud9"
-                    />
-                    <img
-                        src="/images/cloud5.png"
-                        className="absolute bottom-0  animate-cloud  w-3/4 "
-                        style={{ '--i': 6 }}
-                        alt="cloud10"
-                    />
-                </div>
-                <div className="text-center absolute  py-64">
-                    <span className="uppercase text-xl text-white ">Minimalist Cloud Podcast</span>
-                    <p className="text-4xl  font-bold py-2 gradient-text  ">
-                        Powered by Moroccan Darija & Tea
-                    </p>
 
-                    <div className="pt-12 pulsate-fwd  ">
-                        <a
-                            href="/#episodes"
-                            className="rounded-full font-bold px-4 py-3 bg-white border-gray-300 border-1 ">
-                            <span className=" text-blue-300">Start listening</span>
-                        </a>
+            <section className="text-gray-800 ">
+                <div className="container mx-auto flex px-12 py-24 md:flex-row flex-col items-center">
+                    <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+                        <div className="sm:text-center lg:text-left">
+                            <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-4xl md:text-5xl">
+                                <span className="block xl:inline">
+                                    {' '}
+                                    <span className="text-indigo-600 font-mono "> S7aba </span>a
+                                    podcast
+                                </span>
+                                <span className="block ">in the cloud</span>
+                            </h1>
+                            <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                                A minimalist cloud podcast in Darija powered by tea
+                            </p>
+                            <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
+                                <div className="rounded-md shadow">
+                                    <a
+                                        href="#episodes"
+                                        className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                                        Listen now
+                                    </a>
+                                </div>
+                                <div className="mt-3 sm:mt-0 sm:ml-3 flex justify-center">
+                                    {/* podcast icons */}
+
+                                    <Link href={Config.spotify}>
+                                        <a className="m-3 text-indigo-500 hover:text-indigo-600">
+                                            <span className="sr-only">Spotify </span>
+                                            <img
+                                                src="/images/spotify.svg"
+                                                alt="Google"
+                                                className="w-8"
+                                            />
+                                        </a>
+                                    </Link>
+                                    <Link href={Config.google}>
+                                        <a className="m-3 text-indigo-500 hover:text-indigo-600">
+                                            <span className="sr-only">Google podcast</span>
+                                            <img
+                                                src="/images/google-podcasts.svg"
+                                                alt="Google"
+                                                className="w-8"
+                                            />
+                                        </a>
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+                        <img
+                            className="  object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
+                            src="images/podcast.jpg"
+                            alt=""
+                        />
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <section
-                id="episodes"
-                className="flex flex-col justify-center items-center  md:h-screen py-8">
-                {/* <h1 className="text-4xl font-extrabold text-blue-300  pb-6 pt-6  text-center tracking-wide ">
+            <section id="episodes" className="flex flex-col justify-center items-center py-2">
+                {/* <h1 className="text-4xl font-extrabold text-indigo-300  pb-6 pt-6  text-center tracking-wide ">
                     Last Episode
                 </h1> */}
                 {/* <LastEpisode episode={lastEpisode} /> */}
-                <h1 className="text-4xl font-extrabold text-blue-300  pb-6 pt-8 text-center tracking-wide">
+                <h1 className="text-4xl font-extrabold text-indigo-300  pb-6 pt-8 text-center tracking-wide">
                     Latest Episodes
                 </h1>
                 <div>
@@ -113,8 +94,8 @@ function HomePage({ episodes, lastEpisode }) {
 
             <About />
 
-            <Contact></Contact>
-            <Footer></Footer>
+            <Contact />
+            <Footer />
         </div>
     );
 }
@@ -122,6 +103,9 @@ function HomePage({ episodes, lastEpisode }) {
 HomePage.getInitialProps = async () => {
     const episodes = await getEpisodes();
     return { episodes: episodes.slice(0, 3) };
+};
+HomePage.propTypes = {
+    episodes: PropTypes.array
 };
 
 export default HomePage;
