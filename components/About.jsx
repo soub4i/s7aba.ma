@@ -6,17 +6,17 @@ import { useRef, useEffect } from 'react';
 
 export default function About() {
     const about = useRef(null);
-    useEffect(() => {
-        // animate about
-        const observer = new IntersectionObserver(handleObserver, {
-            root: null,
-            rootMargin: '20px',
-            threshold: 0.5
-        });
-        if (about.current) {
-            observer.observe(about.current);
-        }
-    }, []);
+    // useEffect(() => {
+    //     // animate about
+    //     const observer = new IntersectionObserver(handleObserver, {
+    //         root: null,
+    //         rootMargin: '20px',
+    //         threshold: 0.5
+    //     });
+    //     if (about.current) {
+    //         observer.observe(about.current);
+    //     }
+    // }, []);
     const handleObserver = (entities) => {
         const target = entities[0];
         if (target.isIntersecting) {

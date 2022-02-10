@@ -17,7 +17,7 @@ export default function Navbar() {
                 <button
                     data-collapse-toggle="mobile-menu"
                     type="button"
-                    className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    className="inline-flex items-center p-2 ml-3 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
                     aria-controls="mobile-menu-2"
                     aria-expanded="false"
                     onClick={() => setIsOpen(!isOpen)}>
@@ -47,31 +47,28 @@ export default function Navbar() {
                         </svg>
                     )}
                 </button>
-                <ul className="hidden sm:flex text-center  flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-                    <li>
+                <ul className="hidden sm:flex text-center  flex-col mt-4 md:flex-row md:space-x-8 md:mt-0  md:font-semibold">
+                    <li className="block py-2 pr-4 pl-3 rounded-md text-gray-700  md:hover:bg-indigo-300 md:border-0 md:hover:text-white md:p-2 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
                         <Link
-                            className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-indigo-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                             href="/#home">
                             Home
                         </Link>
                     </li>
-                    <li>
+                    <li className="block py-2 pr-4 pl-3 rounded-md text-gray-700  md:hover:bg-indigo-300 md:border-0 md:hover:text-white md:p-2 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
                         <Link
-                            className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-indigo-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                            
                             href="/episodes">
                             Episodes
                         </Link>
                     </li>
-                    <li>
+                    <li className="block py-2 pr-4 pl-3 rounded-md text-gray-700  md:hover:bg-indigo-300 md:border-0 md:hover:text-white md:p-2 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
                         <Link
-                            className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-indigo-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                             href="/#about">
                             About
                         </Link>
                     </li>
-                    <li>
+                    <li className="block py-2 pr-4 pl-3 rounded-md text-gray-700  md:hover:bg-indigo-300 md:border-0 md:hover:text-white md:p-2 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"q></li>
                         <Link
-                            className="block py-2 pr-4 pl-3 text-gray-700 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-indigo-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                             href="/#contact">
                             Contact
                         </Link>
