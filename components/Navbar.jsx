@@ -67,7 +67,7 @@ export default function Navbar() {
                             About
                         </Link>
                     </li>
-                    <li className="block py-2 pr-4 pl-3 rounded-md text-gray-700  md:hover:bg-indigo-300 md:border-0 md:hover:text-white md:p-2 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"q></li>
+                    <li className="block py-2 pr-4 pl-3 rounded-md text-gray-700  md:hover:bg-indigo-300 md:border-0 md:hover:text-white md:p-2 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">
                         <Link
                             href="/#contact">
                             Contact
