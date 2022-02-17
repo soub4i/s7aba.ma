@@ -2,27 +2,27 @@ import React from 'react';
 
 import Link from 'next/link';
 import Config from '../config';
-import { useRef, useEffect } from 'react';
+import { useRef } from 'react';
 
 export default function About() {
     const about = useRef(null);
-    useEffect(() => {
-        // animate about
-        const observer = new IntersectionObserver(handleObserver, {
-            root: null,
-            rootMargin: '20px',
-            threshold: 0.5
-        });
-        if (about.current) {
-            observer.observe(about.current);
-        }
-    }, []);
-    const handleObserver = (entities) => {
-        const target = entities[0];
-        if (target.isIntersecting) {
-            about.current.className = about.current.className + 'swing-in-top-fwd';
-        }
-    };
+    // useEffect(() => {
+    //     // animate about
+    //     const observer = new IntersectionObserver(handleObserver, {
+    //         root: null,
+    //         rootMargin: '20px',
+    //         threshold: 0.5
+    //     });
+    //     if (about.current) {
+    //         observer.observe(about.current);
+    //     }
+    // }, []);
+//     const handleObserver = (entities) => {
+//         const target = entities[0];
+//         if (target.isIntersecting) {
+//             about.current.className = about.current.className + 'swing-in-top-fwd';
+//         }
+//     };
     return (
         <section
             ref={about}
