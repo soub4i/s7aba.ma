@@ -26,9 +26,9 @@ function HomePage({ episodes }) {
                             <h1 className="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-4xl md:text-5xl">
                                 <span className="block xl:inline">
                                     <span
-                                        className="text-indigo-600 mr-1"
+                                        className="text-indigo-500 mr-1"
                                         style={{ fontFamily: 'Open Sans' }}>
-                                        S7aba
+                                        S7aba{" "}
                                     </span>
                                     a podcast
                                 </span>
@@ -38,10 +38,10 @@ function HomePage({ episodes }) {
                                 A minimalist cloud podcast in Darija powered by tea
                             </p>
                             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                                <div className="rounded-md shadow">
+                                <div className="rounded-md">
                                     <a
                                         href="#episodes"
-                                        className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10">
+                                        className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-700 md:py-3 md:text-lg md:px-10">
                                         Listen now
                                     </a>
                                 </div>
@@ -91,7 +91,7 @@ function HomePage({ episodes }) {
                     <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
                         <img
                             className="  object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-                            src="images/podcast.jpg"
+                            src="images/podcast.png"
                             alt=""
                         />
                     </div>
