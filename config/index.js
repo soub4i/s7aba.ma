@@ -3,6 +3,7 @@ export default {
     websiteDescription: 'Minimalist cloud podcast powered by Moroccan Darija & Tea',
     twitter: 's7aba_podcast',
     instagram: 's7aba_podcast',
+    appleItunes: 'https://podcasts.apple.com/us/podcast/s7aba-podcast/id1544020012?uo=4',
     spotify: 'https://open.spotify.com/show/1BXjXjq5nn1SGlU23i6wf3?si=ZqP78Ke3Qs2_SSSLKI4fCg',
     google:
         'https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy84ZGE2OTJjL3BvZGNhc3QvcnNz?sa=X&ved=0CAIQ9sEGahcKEwjYg8KBg87tAhUAAAAAHQAAAAAQBA',

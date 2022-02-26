@@ -49,7 +49,9 @@ function HomePage({ episodes }) {
                                     {/* podcast icons */}
 
                                     <Link href={Config.spotify}>
-                                        <a className="m-3 text-indigo-500 hover:text-indigo-600">
+                                        <a
+                                            target="_blank"
+                                            className="m-3 text-indigo-500 hover:text-indigo-600">
                                             <span className="sr-only">Spotify </span>
                                             <img
                                                 src="/images/spotify.svg"
@@ -59,10 +61,24 @@ function HomePage({ episodes }) {
                                         </a>
                                     </Link>
                                     <Link href={Config.google}>
-                                        <a className="m-3 text-indigo-500 hover:text-indigo-600">
+                                        <a
+                                            target="_blank"
+                                            className="m-3 text-indigo-500 hover:text-indigo-600">
                                             <span className="sr-only">Google podcast</span>
                                             <img
                                                 src="/images/google-podcasts.svg"
+                                                alt="Google"
+                                                className="w-8"
+                                            />
+                                        </a>
+                                    </Link>
+                                    <Link href={Config.appleItunes}>
+                                        <a
+                                            target="_blank"
+                                            className="m-3 text-indigo-500 hover:text-indigo-600">
+                                            <span className="sr-only">Apple podcast</span>
+                                            <img
+                                                src="/images/apple.svg"
                                                 alt="Google"
                                                 className="w-8"
                                             />
