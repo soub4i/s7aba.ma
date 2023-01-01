@@ -19,7 +19,7 @@ function HomePage({ episodes }) {
                 <meta name="description" content={Config.websiteDescription} />
             </Head>
 
-            <section className="text-gray-800 ">
+            <section className="text-gray-800">
                 <div className="container mx-auto flex px-12 py-24 md:flex-row flex-col items-center">
                     <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
                         <div className="sm:text-center lg:text-left">
@@ -38,13 +38,8 @@ function HomePage({ episodes }) {
                                 A minimalist cloud podcast in Darija powered by tea
                             </p>
                             <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
-                                <div className="rounded-md">
-                                    <a
-                                        href="#episodes"
-                                        className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-500 hover:bg-indigo-700 md:py-3 md:text-lg md:px-10">
-                                        Listen now
-                                    </a>
-                                </div>
+                             
+                               
                                 <div className="mt-3 sm:mt-0 sm:ml-3 flex justify-center">
                                     {/* podcast icons */}
 
@@ -85,13 +80,17 @@ function HomePage({ episodes }) {
                                         </a>
                                     </Link>
                                 </div>
+                                <div className="rounded-md mx-2">
+                                <a href="https://www.buymeacoffee.com/soubai"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=soubai&button_colour=FFDD00&font_colour=000000&font_family=Lato&outline_colour=000000&coffee_colour=ffffff" /></a>
+
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
                         <img
                             className="  object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
-                            src="images/podcast.png"
+                            src="images/hero.png"
                             alt=""
                         />
                     </div>

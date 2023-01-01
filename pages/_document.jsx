@@ -34,6 +34,7 @@ class MyDocument extends Document {
                     <meta name="msapplication-TileColor" content="#da532c" />
                     <meta name="theme-color" content="#ffffff"></meta>
                     <link rel="stylesheet" href="styles/global.css" />
+                    <script data-name="BMC-Widget" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="soubai" data-description="Support me on Buy me a coffee!" data-message="" data-color="#5F7FFF" data-position="Right" data-x_margin="18" data-y_margin="18"></script>
                     <script
                         async
                         src={`https://www.googletagmanager.com/gtag/js?id=${config.GATrackId}`}

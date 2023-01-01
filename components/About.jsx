@@ -47,7 +47,8 @@ export default function About() {
                         </div>
                     </p>
 
-                    <p className="mx-4 mt-2 text-lg font-bold text-gray-700">{Config.hostName}</p>
+
+
                 </div>
             </div>
         </section>
