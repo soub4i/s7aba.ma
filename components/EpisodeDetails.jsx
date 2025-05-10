@@ -8,13 +8,14 @@ export default function EpisodeDetails({ episode, notes }) {
         <div className="my-24 flex md:w-2/4">
             <div className="bg-white">
                 <div className="object-contain  w-full mx-auto">
-                    <image
-                        layout="responsive"
-                        width={64}
-                        height={64}
+                   <img
+                        width="auto"
+                        height={92}
                         src={episode.image}
                         alt="episode image"
-                    />{' '}
+                      
+                    />
+                    {' '}
                 </div>
                 <div className="px-4 py-2 mt-2">
                     <h3 className="font-bold text-2l text-gray-800 tracking-normal my-4">
