@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Image from 'next/image';
 import Notes from './Notes';
 import PlayButton from './PlayButton';
 
@@ -9,7 +8,7 @@ export default function EpisodeDetails({ episode, notes }) {
         <div className="my-24 flex md:w-2/4">
             <div className="bg-white">
                 <div className="object-contain  w-full mx-auto">
-                    <Image
+                    <image
                         layout="responsive"
                         width={64}
                         height={64}
