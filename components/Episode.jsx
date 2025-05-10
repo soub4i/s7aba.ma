@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Image from 'next/image';
 import Link from 'next/link';
 import PlayButton from './PlayButton';
 
@@ -10,10 +9,9 @@ export default function Episode({ episode }) {
             <div className='relative rounded-lg  bg-gray-200 rounded bg-opacity-25'>
             <Link href="/episodes/[id]" as={`/episodes/${episode.guid}`} className='-z-10' >
                 <a >
-                    <Image
-                        width={92}
+                    <img
+                        width="auto"
                         height={92}
-                        layout="responsive"
                         src={episode.image}
                         alt="episode image"
                       
